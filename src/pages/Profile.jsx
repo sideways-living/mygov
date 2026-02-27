@@ -89,10 +89,105 @@ export default function Profile() {
       </div>
 
       <div className="flex-1 px-4 pt-6 pb-24 space-y-6">
-        {/* Required Cards Section */}
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <p className="font-semibold text-gray-800 mb-3">Which cards are required in your wallet?</p>
-          <div className="space-y-2">
+        {/* Common Profile Information */}
+        <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
+          <p className="font-semibold text-gray-800 mb-3">Personal Information</p>
+
+          <div className="grid grid-cols-3 gap-3">
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">First Name</label>
+              <input
+                type="text"
+                value={form.firstName}
+                onChange={e => handle("firstName", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. Daniel"
+              />
+            </div>
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Middle Name</label>
+              <input
+                type="text"
+                value={form.middleName}
+                onChange={e => handle("middleName", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="Optional"
+              />
+            </div>
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Surname</label>
+              <input
+                type="text"
+                value={form.surname}
+                onChange={e => handle("surname", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. Greenyer"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Address Line 1</label>
+            <input
+              type="text"
+              value={form.address1}
+              onChange={e => handle("address1", e.target.value)}
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+              placeholder="Street address"
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Address Line 2</label>
+            <input
+              type="text"
+              value={form.address2}
+              onChange={e => handle("address2", e.target.value)}
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+              placeholder="Unit/Suite (optional)"
+            />
+          </div>
+
+          <div className="grid grid-cols-3 gap-3">
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Suburb</label>
+              <input
+                type="text"
+                value={form.suburb}
+                onChange={e => handle("suburb", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="Suburb"
+              />
+            </div>
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">State</label>
+              <input
+                type="text"
+                value={form.state}
+                onChange={e => handle("state", e.target.value.toUpperCase())}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="NSW"
+                maxLength="3"
+              />
+            </div>
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Postcode</label>
+              <input
+                type="text"
+                value={form.postcode}
+                onChange={e => handle("postcode", e.target.value.replace(/\D/g, "").slice(0, 4))}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. 2000"
+                maxLength="4"
+              />
+            </div>
+          </div>
+        </div>
+
+         {/* Required Cards Section */}
+         <div className="bg-white rounded-xl p-4 shadow-sm">
+           <p className="font-semibold text-gray-800 mb-3">Which cards are required in your wallet? (Max 2)</p>
+           <div className="space-y-2">
             <label className="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
