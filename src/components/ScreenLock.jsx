@@ -12,16 +12,7 @@ export default function ScreenLock({ onUnlock }) {
   }
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-[#4dcfef] flex flex-col items-center justify-center max-w-sm mx-auto">
-      {/* Status bar */}
-      <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-5 pt-3 text-xs text-black">
-        <span>3:50 🔔</span>
-        <div className="flex gap-1">
-          <span>📶</span>
-          <span>📡</span>
-          <span>🔋</span>
-        </div>
-      </div>
+    <div className="fixed inset-0 z-[9999] bg-[#4dcfef] flex flex-col items-center justify-center w-screen">
 
       {/* Header logo */}
       <div className="absolute top-6 left-5 right-5 flex items-center gap-2">

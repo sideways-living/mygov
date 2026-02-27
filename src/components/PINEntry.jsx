@@ -37,16 +37,7 @@ export default function PINEntry({ onSuccess, onBack }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-[#4dcfef] flex flex-col max-w-sm mx-auto">
-      {/* Status bar */}
-      <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-5 pt-3 text-xs text-black z-10">
-        <span>3:50 🔔</span>
-        <div className="flex gap-1">
-          <span>📶</span>
-          <span>📡</span>
-          <span>🔋</span>
-        </div>
-      </div>
+    <div className="fixed inset-0 z-[9999] bg-[#4dcfef] flex flex-col w-screen">
 
       {/* Header with close and forgot PIN */}
       <div className="flex items-center justify-between px-5 pt-6 pb-4">
