@@ -59,9 +59,9 @@ export default function Inbox() {
   const searchBarOpacity = revealed ? 1 : Math.min(pullDistance / PULL_THRESHOLD, 1);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto overflow-hidden">
+    <div className="min-h-screen bg-white flex flex-col w-screen overflow-hidden">
       {/* Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-0" style={{ minHeight: 110 }}>
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-0 w-screen" style={{ minHeight: 110 }}>
         <div className="flex items-center justify-end gap-5 mb-1">
           <Folder size={24} className="text-black" />
         </div>
