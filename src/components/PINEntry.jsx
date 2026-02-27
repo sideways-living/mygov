@@ -94,15 +94,13 @@ export default function PINEntry({ onSuccess, onBack }) {
           </button>
         ))}
 
-        {/* 0 and backspace */}
-        <div className="col-start-2">
-          <button
-            onClick={() => handleNumberClick("0")}
-            className="w-full bg-black text-white py-1 rounded-md font-semibold text-xl"
-          >
-            0
-          </button>
-        </div>
+        {/* 0 button */}
+        <button
+          onClick={() => handleNumberClick("0")}
+          className="col-span-2 bg-black text-white py-1 rounded-md font-semibold text-xl"
+        >
+          0
+        </button>
         <button
           onClick={handleBackspace}
           className="flex items-center justify-center text-2xl py-1"
