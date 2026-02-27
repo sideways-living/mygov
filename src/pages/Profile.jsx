@@ -286,10 +286,10 @@ export default function Profile() {
                 placeholder="e.g. Jul 27"
               />
             </div>
-          </div>
-        )}
+            </div>
+            )}
 
-        {/* Pensioner Concession Card */}
+            {/* Pensioner Concession Card */}
         {form.requiredCards?.pensionConcession && (
           <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
             <p className="font-semibold text-gray-800">Pensioner Concession Card</p>
