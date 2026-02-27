@@ -132,6 +132,23 @@ export default function Profile() {
             />
           </div>
         </div>
+
+        {/* Screen Lock PIN */}
+        <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
+          <p className="font-semibold text-gray-800">Screen Lock</p>
+
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Set PIN (6 digits)</label>
+            <input
+              type="password"
+              value={form.screenLockPin}
+              onChange={e => handle("screenLockPin", e.target.value.replace(/\D/g, "").slice(0, 6))}
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+              placeholder="Enter 6 digits"
+              maxLength="6"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
