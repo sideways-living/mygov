@@ -3,9 +3,11 @@ import { Shield, Settings, MoreHorizontal, ChevronRight } from "lucide-react";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
+import { getProfile } from "./Profile";
 
 export default function Home() {
-  const userName = "Daniel";
+  const profile = getProfile();
+  const userName = profile.medicareFirstName.charAt(0).toUpperCase() + profile.medicareFirstName.slice(1).toLowerCase();
   const lastSigned = new Date();
 
   return (
