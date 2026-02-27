@@ -185,6 +185,7 @@ export default function Profile() {
             />
           </div>
         </div>
+        )}
 
         {/* Screen Lock PIN */}
         <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
