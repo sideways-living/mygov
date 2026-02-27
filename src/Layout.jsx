@@ -33,7 +33,7 @@ export default function Layout({ children, currentPageName }) {
                 <Icon
                   size={22}
                   strokeWidth={isActive ? 2.2 : 1.5}
-                  className={isActive ? "text-gray-900" : "text-gray-500"}
+                  className={isActive ? "text-gray-900" : "text-gray-700"}
                   fill={isActive && label === "Home" ? "currentColor" : "none"}
                 />
                 <span
