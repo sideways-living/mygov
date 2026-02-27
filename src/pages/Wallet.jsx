@@ -48,14 +48,14 @@ export default function Wallet() {
             alt="Medicare card"
             className="w-full h-full object-cover"
           />
-          {/* Overlay last digits */}
-          <div className="absolute" style={{ bottom: "34%", left: "6%" }}>
+          {/* Overlay last digits — positioned after the 6 dots on the card */}
+          <div className="absolute" style={{ top: "44%", left: "40%" }}>
             <span
               style={{
                 fontFamily: "'Courier New', Courier, monospace",
-                fontSize: "1.45rem",
+                fontSize: "0.85rem",
                 fontWeight: "bold",
-                letterSpacing: "0.18em",
+                letterSpacing: "0.15em",
                 color: "#111",
               }}
             >
