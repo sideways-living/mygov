@@ -49,7 +49,7 @@ export default function Wallet() {
             className="w-full h-full object-cover"
           />
           {/* Overlay last digits — positioned after the 6 dots on the card */}
-          <div className="absolute" style={{ top: "22%", left: "33%" }}>
+          <div className="absolute" style={{ top: "23%", left: "30%" }}>
             <span
               style={{
                 fontFamily: "'Courier New', Courier, monospace",
