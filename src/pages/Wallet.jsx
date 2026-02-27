@@ -35,39 +35,43 @@ export default function Wallet() {
       <div className="flex-1 px-4 pt-5 pb-28 space-y-5">
 
         {/* Organ Donor Card */}
-        <div className="rounded-2xl overflow-hidden shadow-sm" style={{ aspectRatio: "1.586" }}>
-          <img
-            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/39641633c_organdonor.jpg"
-            alt="Organ donor card"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {profile.requiredCards?.organ && (
+          <div className="rounded-2xl overflow-hidden shadow-sm" style={{ aspectRatio: "1.586" }}>
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/39641633c_organdonor.jpg"
+              alt="Organ donor card"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
 
         {/* Medicare Card */}
-        <div
-          className="rounded-2xl overflow-hidden shadow-sm cursor-pointer relative"
-          style={{ aspectRatio: "1.586" }}
-          onClick={() => setMedicareOpen(true)}
-        >
-          <img
-            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/37f9c6da5_medicarecard.png"
-            alt="Medicare card"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute" style={{ top: "26.5%", left: "29.5%" }}>
-            <span
-              style={{
-                fontFamily: "'Courier New', Courier, monospace",
-                fontSize: "1.15rem",
-                fontWeight: "bold",
-                letterSpacing: "0.15em",
-                color: "#111",
-              }}
-            >
-              {formatted}
-            </span>
+        {profile.requiredCards?.medicare && (
+          <div
+            className="rounded-2xl overflow-hidden shadow-sm cursor-pointer relative"
+            style={{ aspectRatio: "1.586" }}
+            onClick={() => setMedicareOpen(true)}
+          >
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/37f9c6da5_medicarecard.png"
+              alt="Medicare card"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute" style={{ top: "26.5%", left: "29.5%" }}>
+              <span
+                style={{
+                  fontFamily: "'Courier New', Courier, monospace",
+                  fontSize: "1.15rem",
+                  fontWeight: "bold",
+                  letterSpacing: "0.15em",
+                  color: "#111",
+                }}
+              >
+                {formatted}
+              </span>
+            </div>
           </div>
-        </div>
+        )}
 
       </div>
 
