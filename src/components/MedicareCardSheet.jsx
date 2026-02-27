@@ -83,7 +83,8 @@ export default function MedicareCardSheet({ open, onClose, profile }) {
               <p className="text-2xl font-bold text-gray-900 mb-2">{profile?.medicareNumber || "2555 69143 6"}</p>
 
               <p className="text-sm font-medium text-gray-900 mb-2">
-                {profile?.medicarePosition || "1"}.{"  "}{profile?.medicareName || "Daniel Greenyer"}
+                {profile?.medicarePosition || "1"}.{"  "}
+                {`${profile?.medicareFirstName || "Daniel"} ${profile?.medicareMiddleInitial || ""} ${profile?.medicareLastName || "Greenyer"}`.trim()}
               </p>
 
               <p className="text-xs text-gray-500 mb-0.5">Valid to</p>
