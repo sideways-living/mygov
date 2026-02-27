@@ -8,9 +8,9 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto">
+    <div className="min-h-screen bg-white flex flex-col w-screen">
       {/* Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-4" style={{ minHeight: 110 }}>
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-4 w-screen" style={{ minHeight: 110 }}>
         <div className="flex items-center justify-end gap-5 mb-1">
           <Pencil size={18} className="text-black" />
           <Plus size={22} className="text-black" />
