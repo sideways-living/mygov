@@ -9,7 +9,7 @@ const HomeIcon = ({ active }) => {
   const fill = active ? "#111827" : "#9ca3af";
   const stroke = "white";
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill={fill}>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill={fill}>
       {/* Chimney */}
       <rect x="14" y="2" width="3" height="5" fill={fill} />
       {/* Roof */}
@@ -25,7 +25,7 @@ const HomeIcon = ({ active }) => {
 const MailIcon = ({ active }) => {
   const fill = active ? "#111827" : "#9ca3af";
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
       {/* Envelope body */}
       <rect x="2" y="5" width="20" height="14" rx="1" fill={fill} />
       {/* X lines */}
@@ -38,7 +38,7 @@ const MailIcon = ({ active }) => {
 const ServicesIcon = ({ active }) => {
   const fill = active ? "#111827" : "#9ca3af";
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
       <rect x="2" y="2" width="9" height="9" rx="1" fill={fill} />
       <rect x="13" y="2" width="9" height="9" rx="1" fill={fill} />
       <rect x="2" y="13" width="9" height="9" rx="1" fill={fill} />
@@ -173,7 +173,7 @@ export default function Layout({ children, currentPageName }) {
                   <ServicesIcon active={isActive} />
                 ) : (
                   <Icon
-                    size={22}
+                    size={28}
                     style={
                       isActive
                         ? { fill: "#111827", stroke: "white", strokeWidth: 1.5 }
