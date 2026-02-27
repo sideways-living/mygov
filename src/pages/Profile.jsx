@@ -7,6 +7,7 @@ const DEFAULTS = {
   organDonor: true,
   medicareNumber: "2555 69143 6",
   medicareFirstName: "Daniel",
+  medicareMiddleInitial: "",
   medicareLastName: "Greenyer",
   medicarePosition: "1",
   medicareValidTo: "Jul 2027",
