@@ -39,20 +39,6 @@ export default function Wallet() {
           </div>
         </div>
 
-        {/* Pensioner Concession Card */}
-        <div className="rounded-2xl overflow-hidden shadow-sm" style={{ minHeight: 160 }}>
-          <div className="bg-[#7b5c6e] px-5 py-4">
-            <p className="text-white text-xl font-semibold">Pensioner Concession Card</p>
-          </div>
-          <div className="bg-[#dce8f0] px-5 py-4">
-            <p className="text-gray-900 font-bold text-sm">Daniel Greenyer</p>
-            <p className="text-gray-700 text-sm mb-6">JSP</p>
-            <p className="text-gray-500 text-xs">
-              <span className="font-semibold text-gray-700">Expires</span>{"  "}30 Nov 2027
-            </p>
-          </div>
-        </div>
-
         {/* Medicare Card */}
         <div className="rounded-2xl overflow-hidden shadow-sm" style={{ background: "#8fca8f", minHeight: 140 }}>
           <div className="p-5">
