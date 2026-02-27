@@ -14,10 +14,23 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="flex-1 px-4 pt-8 pb-24 flex flex-col items-center justify-center text-center">
-        <LayoutGrid size={48} className="text-gray-300 mb-4" />
-        <h2 className="text-xl font-bold text-gray-700 mb-2">Services</h2>
-        <p className="text-sm text-gray-400">Government services linked to your account.</p>
+      <div className="flex-1 pb-24">
+        <div className="grid grid-cols-2" style={{ border: "1px solid #d1d5db" }}>
+          {["Medicare", "Centrelink", "myTax", "Child Support"].map((name, i) => (
+            <div
+              key={name}
+              className="flex flex-col items-center justify-center gap-3 bg-white cursor-pointer hover:bg-gray-50 active:bg-gray-100 transition-colors"
+              style={{
+                height: "160px",
+                borderRight: i % 2 === 0 ? "1px solid #d1d5db" : "none",
+                borderBottom: i < 2 ? "1px solid #d1d5db" : "none",
+              }}
+            >
+              <LayoutGrid size={32} className="text-gray-400" />
+              <span className="text-sm font-medium text-gray-700">{name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
