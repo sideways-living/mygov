@@ -6,7 +6,7 @@ import MyGovLogo from "./MyGovLogo";
 export default function ScreenLock({ onUnlock }) {
   const [showPINEntry, setShowPINEntry] = useState(false);
   const profile = getProfile();
-  const firstName = profile.medicareFirstName.charAt(0).toUpperCase() + profile.medicareFirstName.slice(1).toLowerCase();
+  const firstName = profile.firstName.charAt(0).toUpperCase() + profile.firstName.slice(1).toLowerCase();
 
   if (showPINEntry) {
     return <PINEntry onSuccess={onUnlock} onBack={() => setShowPINEntry(false)} />;
