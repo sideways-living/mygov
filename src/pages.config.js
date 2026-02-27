@@ -53,6 +53,7 @@ import Services from './pages/Services';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import MedicareCard from './pages/MedicareCard';
+import MessageMyHealth from './pages/MessageMyHealth';
 import __Layout from './Layout.jsx';
 
 
@@ -63,6 +64,7 @@ export const PAGES = {
     "Home": Home,
     "Profile": Profile,
     "MedicareCard": MedicareCard,
+    "MessageMyHealth": MessageMyHealth,
 }
 
 export const pagesConfig = {
