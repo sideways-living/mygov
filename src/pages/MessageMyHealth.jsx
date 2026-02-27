@@ -1,8 +1,11 @@
 import { ChevronLeft, Folder } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { getProfile } from "./Profile";
 
 export default function MessageMyHealth() {
   const navigate = useNavigate();
+  const profile = getProfile();
+  const firstName = profile.medicareFirstName.toUpperCase();
 
   return (
     <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto">
