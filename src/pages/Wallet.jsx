@@ -14,6 +14,10 @@ export default function Wallet() {
     return () => window.removeEventListener("focus", onFocus);
   }, []);
 
+  const num = (profile.medicareNumber || "").replace(/\s/g, "");
+  const last4 = num.slice(-4);
+  const formatted = `${last4.slice(0, 3)} ${last4.slice(3)}`;
+
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
       {/* Header */}
@@ -48,11 +52,17 @@ export default function Wallet() {
             alt="Medicare card"
             className="w-full h-full object-cover"
           />
-          {/* Overlay last digits — positioned after the 6 dots on the card */}
           <div className="absolute" style={{ top: "27%", left: "30%" }}>
-...
-                return `${last4.slice(0, 3)} ${last4.slice(3)}`;
-              })()}
+            <span
+              style={{
+                fontFamily: "'Courier New', Courier, monospace",
+                fontSize: "1.15rem",
+                fontWeight: "bold",
+                letterSpacing: "0.15em",
+                color: "#111",
+              }}
+            >
+              {formatted}
             </span>
           </div>
         </div>
