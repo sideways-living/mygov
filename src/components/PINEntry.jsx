@@ -72,12 +72,12 @@ export default function PINEntry({ onSuccess, onBack }) {
 
       {/* Numeric keypad */}
       <div className="px-5 pb-8">
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 gap-2.5">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
           <button
             key={num}
             onClick={() => handleNumberClick(num.toString())}
-            className="bg-black text-white py-2.5 rounded-lg font-semibold text-xl"
+            className="bg-black text-white py-2 rounded-md font-semibold text-xl"
           >
             <div>{num}</div>
             <div className="text-xs opacity-75">
@@ -98,14 +98,14 @@ export default function PINEntry({ onSuccess, onBack }) {
         <div className="col-start-2">
           <button
             onClick={() => handleNumberClick("0")}
-            className="w-full bg-black text-white py-2.5 rounded-lg font-semibold text-xl"
+            className="w-full bg-black text-white py-2 rounded-md font-semibold text-xl"
           >
             0
           </button>
         </div>
         <button
           onClick={handleBackspace}
-          className="flex items-center justify-center text-2xl py-2.5"
+          className="flex items-center justify-center text-2xl py-2"
         >
           <span style={{fontSize: '24px', color: 'black', fontWeight: 'bold'}}>⌫</span>
         </button>
