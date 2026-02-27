@@ -66,7 +66,10 @@ export default function VerifyCardSheet({ open, onClose }) {
             style={{ aspectRatio: "1", borderStyle: "dashed" }}
           >
             {status === "loading" && (
-              <RefreshCw size={40} className="text-gray-300 animate-spin" />
+              <RefreshCw size={60} className="text-gray-300 animate-spin" />
+            )}
+            {status === "error" && (
+              <AlertCircle size={60} className="text-red-500" />
             )}
           </div>
 
