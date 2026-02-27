@@ -40,6 +40,18 @@ export default function Profile() {
     saveProfile(updated);
   };
 
+  const handleCardToggle = (card) => {
+    const updated = {
+      ...form,
+      requiredCards: {
+        ...form.requiredCards,
+        [card]: !form.requiredCards[card],
+      },
+    };
+    setForm(updated);
+    saveProfile(updated);
+  };
+
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
       <div className="bg-[#4dcfef] px-5 pt-10 pb-6">
@@ -52,6 +64,39 @@ export default function Profile() {
       </div>
 
       <div className="flex-1 px-4 pt-6 pb-24 space-y-6">
+        {/* Required Cards Section */}
+        <div className="bg-white rounded-xl p-4 shadow-sm">
+          <p className="font-semibold text-gray-800 mb-3">Which cards are required in your wallet?</p>
+          <div className="space-y-2">
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={form.requiredCards?.pensionConcession || false}
+                onChange={() => handleCardToggle("pensionConcession")}
+                className="w-5 h-5 accent-teal-500"
+              />
+              <span className="text-sm text-gray-700">Pension Concession Card</span>
+            </label>
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={form.requiredCards?.medicare || false}
+                onChange={() => handleCardToggle("medicare")}
+                className="w-5 h-5 accent-teal-500"
+              />
+              <span className="text-sm text-gray-700">Medicare</span>
+            </label>
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={form.requiredCards?.organ || false}
+                onChange={() => handleCardToggle("organ")}
+                className="w-5 h-5 accent-teal-500"
+              />
+              <span className="text-sm text-gray-700">Organ Donor</span>
+            </label>
+          </div>
+        </div>
         {/* Organ Donor */}
         <div className="bg-white rounded-xl p-4 shadow-sm">
           <p className="font-semibold text-gray-800 mb-3">Organ Donor Card</p>
