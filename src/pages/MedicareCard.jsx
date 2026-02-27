@@ -68,7 +68,7 @@ export default function MedicareCard() {
       </div>
 
       {/* Verify card */}
-      <div className="mx-4 mt-3 border border-black rounded-xl px-5 py-4 flex items-center justify-center gap-3 cursor-pointer active:bg-gray-50">
+      <div className="mx-4 mt-3 border border-black rounded-xl px-5 py-4 flex items-center justify-center gap-3 cursor-pointer active:bg-gray-50" onClick={() => navigate(createPageUrl("VerifyCard"))}>
         <QrCode size={20} className="text-black" />
         <span className="text-sm font-semibold text-black">Verify card</span>
       </div>
