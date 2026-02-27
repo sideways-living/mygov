@@ -5,7 +5,10 @@ import { createPageUrl } from "@/utils";
 
 const DEFAULTS = {
   organDonor: true,
-  medicareNumber: ".... ..143 b",
+  medicareNumber: "2555 69143 6",
+  medicareName: "Daniel Greenyer",
+  medicarePosition: "1",
+  medicareValidTo: "Jul 2027",
 };
 
 export function getProfile() {
