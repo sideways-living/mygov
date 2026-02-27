@@ -233,9 +233,10 @@ export default function Profile() {
               />
             </div>
           </div>
-        )}
+          </div>
+          )}
 
-        {/* Medicare */}
+          {/* Medicare */}
         {form.requiredCards?.medicare && (
           <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
             <p className="font-semibold text-gray-800">Medicare Card</p>
