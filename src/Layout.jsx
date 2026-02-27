@@ -77,15 +77,16 @@ export default function Layout({ children, currentPageName }) {
 
   useEffect(() => {
     if (!isLocked) {
+      let timerId = null;
+
       const handleActivity = () => {
-        clearTimeout(inactivityTimer);
-        const timer = setTimeout(() => {
+        if (timerId) clearTimeout(timerId);
+        timerId = setTimeout(() => {
           const profile = getProfile();
           if (profile.screenLockPin && profile.screenLockPin.length > 0) {
             setIsLocked(true);
           }
         }, 2 * 60 * 1000); // 2 minutes
-        setInactivityTimer(timer);
       };
 
       window.addEventListener("mousemove", handleActivity);
@@ -100,10 +101,10 @@ export default function Layout({ children, currentPageName }) {
         window.removeEventListener("keypress", handleActivity);
         window.removeEventListener("click", handleActivity);
         window.removeEventListener("touch", handleActivity);
-        clearTimeout(inactivityTimer);
+        if (timerId) clearTimeout(timerId);
       };
     }
-  }, [isLocked, inactivityTimer]);
+  }, [isLocked]);
 
   if (isLocked) {
     return <ScreenLock onUnlock={() => setIsLocked(false)} />;
