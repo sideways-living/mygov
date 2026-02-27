@@ -19,24 +19,29 @@ export default function Services() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 pb-24">
+      <div className="flex-1 pb-24 bg-white">
         {/* Forms and Applications */}
-        <div className="bg-white border-b border-gray-200 px-4 py-4 flex items-center justify-between">
-          <span className="text-gray-900 text-sm">Forms and Applications</span>
-          <ChevronRight size={18} className="text-gray-400" />
+        <div className="mx-auto mt-4" style={{ width: "95%" }}>
+          <div className="bg-gray-100 rounded-lg px-4 py-4 flex items-center justify-between">
+            <span className="text-gray-900 text-sm">Forms and Applications</span>
+            <ChevronRight size={18} className="text-gray-400" />
+          </div>
         </div>
 
         {/* Linked services */}
-        <div className="mt-5">
-          <p className="text-gray-500 text-sm px-4 mb-2">Linked services</p>
-          <div className="bg-white">
+        <div className="mt-5 mx-auto" style={{ width: "95%" }}>
+          <p className="text-gray-500 text-sm mb-2">Linked services</p>
+          <div className="bg-gray-100 rounded-lg overflow-hidden">
             {services.map((svc, i) => (
-              <div key={i} className="px-4 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer active:bg-gray-50">
-                <div>
-                  <p className="text-gray-900 text-sm font-medium">{svc.name}</p>
-                  <p className="text-gray-400 text-xs mt-0.5">{svc.date}</p>
+              <div key={i}>
+                <div className="px-4 py-4 flex items-center justify-between cursor-pointer active:bg-gray-200">
+                  <div>
+                    <p className="text-gray-900 text-sm font-medium">{svc.name}</p>
+                    <p className="text-gray-400 text-xs mt-0.5">{svc.date}</p>
+                  </div>
+                  <ArrowUpRight size={18} className="text-gray-400" />
                 </div>
-                <ArrowUpRight size={18} className="text-gray-400" />
+                {i < services.length - 1 && <div className="border-t border-black/10 mx-4" />}
               </div>
             ))}
           </div>
