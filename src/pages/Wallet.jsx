@@ -8,6 +8,7 @@ import MedicareCardSheet from "../components/MedicareCardSheet";
 export default function Wallet() {
   const navigate = useNavigate();
   const [profile, setProfile] = useState(getProfile);
+  const [medicareOpen, setMedicareOpen] = useState(false);
 
   useEffect(() => {
     const onFocus = () => setProfile(getProfile());
