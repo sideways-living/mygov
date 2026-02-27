@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { ClipboardList, Mail, LayoutGrid } from "lucide-react";
+import { ClipboardList } from "lucide-react";
 
 const HomeIcon = ({ active }) => {
   const fill = active ? "#111827" : "#9ca3af";
