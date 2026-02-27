@@ -296,8 +296,8 @@ export default function Profile() {
                 placeholder="e.g. Jul 27"
               />
             </div>
-            </div>
-            )}
+          </div>
+        )}
 
             {/* Pensioner Concession Card */}
         {form.requiredCards?.pensionConcession && (
