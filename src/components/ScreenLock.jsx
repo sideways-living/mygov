@@ -16,10 +16,7 @@ export default function ScreenLock({ onUnlock }) {
 
       {/* Header logo */}
       <div className="absolute top-6 left-5 right-5 flex items-center gap-2">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-          <polygon points="6,4 22,14 6,24" fill="black" />
-          <polygon points="14,4 28,14 14,24" fill="black" opacity="0.4" />
-        </svg>
+        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/a029d6159_mygovapplogo.png" alt="myGov" width="28" height="28" />
         <span className="text-black font-semibold text-xl">myGov</span>
       </div>
 

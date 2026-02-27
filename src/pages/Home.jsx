@@ -16,13 +16,7 @@ export default function Home() {
       <div className="bg-[#4dcfef] px-5 pt-10 pb-8 relative z-10 w-screen" style={{borderBottomRightRadius: 0}}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            {/* myGov play button logo */}
-            <div className="flex items-center">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <polygon points="6,4 22,14 6,24" fill="black" />
-                <polygon points="14,4 28,14 14,24" fill="black" opacity="0.4" />
-              </svg>
-            </div>
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/a029d6159_mygovapplogo.png" alt="myGov" width="28" height="28" />
             <span className="text-black font-semibold text-xl tracking-tight">myGov</span>
           </div>
           <Link to={createPageUrl("Profile")} className="text-black">
