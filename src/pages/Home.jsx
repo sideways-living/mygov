@@ -9,24 +9,31 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto relative">
       {/* Cyan Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-8 rounded-b-3xl relative z-10">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            {/* myGov play button logo */}
-            <div className="flex items-center">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <polygon points="6,4 22,14 6,24" fill="black" />
-                <polygon points="14,4 28,14 14,24" fill="black" opacity="0.4" />
-              </svg>
+      <div className="relative z-10">
+        <div className="bg-[#4dcfef] px-5 pt-10 pb-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <polygon points="6,4 22,14 6,24" fill="black" />
+                  <polygon points="14,4 28,14 14,24" fill="black" opacity="0.4" />
+                </svg>
+              </div>
+              <span className="text-black font-semibold text-xl tracking-tight">myGov</span>
             </div>
-            <span className="text-black font-semibold text-xl tracking-tight">myGov</span>
+            <button className="text-black">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+              </svg>
+            </button>
           </div>
-          <button className="text-black">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-            </svg>
-          </button>
+        </div>
+        {/* Convex curve at the bottom of header */}
+        <div className="overflow-hidden" style={{ height: "32px", marginTop: "-1px" }}>
+          <svg viewBox="0 0 400 32" preserveAspectRatio="none" width="100%" height="32">
+            <path d="M0,0 Q200,64 400,0 L400,0 L0,0 Z" fill="#4dcfef" />
+          </svg>
         </div>
       </div>
 
