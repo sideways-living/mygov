@@ -11,6 +11,7 @@ const DEFAULTS = {
   medicareLastName: "Greenyer",
   medicarePosition: "1",
   medicareValidTo: "Jul 2027",
+  screenLockPin: "",
 };
 
 export function getProfile() {
