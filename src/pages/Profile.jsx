@@ -78,6 +78,16 @@ export default function Profile() {
     saveProfile(updated);
   };
 
+  const handleSave = () => {
+    setSaveState("saving");
+    setTimeout(() => {
+      setSaveState("saved");
+      setTimeout(() => {
+        setSaveState("idle");
+      }, 2000);
+    }, 1500);
+  };
+
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
       <div className="bg-[#4dcfef] px-5 pt-10 pb-6">
