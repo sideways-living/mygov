@@ -82,45 +82,58 @@ export default function PINEntry({ onSuccess, onBack }) {
       </div>
 
       {/* Numeric keypad */}
-      <div className="px-5 pb-8">
-        <div className="grid grid-cols-3 gap-3">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
-            <button
-              key={num}
-              onClick={() => handleNumberClick(num.toString())}
-              className="bg-black text-white py-4 rounded-lg font-semibold text-xl"
-            >
-              <div>{num}</div>
-              <div className="text-xs opacity-75">
-                {num === 1 && ""}
-                {num === 2 && "ABC"}
-                {num === 3 && "DEF"}
-                {num === 4 && "GHI"}
-                {num === 5 && "JKL"}
-                {num === 6 && "MNO"}
-                {num === 7 && "PQRS"}
-                {num === 8 && "TUV"}
-                {num === 9 && "WXYZ"}
-              </div>
-            </button>
-          ))}
-
-          {/* 0 and backspace */}
-          <div className="col-start-2">
-            <button
-              onClick={() => handleNumberClick("0")}
-              className="w-full bg-black text-white py-4 rounded-lg font-semibold text-xl"
-            >
-              0
-            </button>
-          </div>
+      <div className="px-5 pb-8 space-y-4">
+      <div className="grid grid-cols-3 gap-3">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
           <button
-            onClick={handleBackspace}
-            className="bg-black text-white py-4 rounded-lg font-semibold text-xl flex items-center justify-center"
+            key={num}
+            onClick={() => handleNumberClick(num.toString())}
+            className="bg-black text-white py-4 rounded-lg font-semibold text-xl"
           >
-            ⌫
+            <div>{num}</div>
+            <div className="text-xs opacity-75">
+              {num === 1 && ""}
+              {num === 2 && "ABC"}
+              {num === 3 && "DEF"}
+              {num === 4 && "GHI"}
+              {num === 5 && "JKL"}
+              {num === 6 && "MNO"}
+              {num === 7 && "PQRS"}
+              {num === 8 && "TUV"}
+              {num === 9 && "WXYZ"}
+            </div>
+          </button>
+        ))}
+
+        {/* 0 and backspace */}
+        <div className="col-start-2">
+          <button
+            onClick={() => handleNumberClick("0")}
+            className="w-full bg-black text-white py-4 rounded-lg font-semibold text-xl"
+          >
+            0
           </button>
         </div>
+        <button
+          onClick={handleBackspace}
+          className="bg-black text-white py-4 rounded-lg font-semibold text-xl flex items-center justify-center"
+        >
+          ⌫
+        </button>
+      </div>
+
+      {/* Save button */}
+      <button
+        onClick={handleSave}
+        disabled={pin.length !== maxLength}
+        className={`w-full py-4 rounded-lg font-semibold text-base transition-colors ${
+          pin.length === maxLength
+            ? "bg-black text-white"
+            : "bg-gray-300 text-gray-500"
+        }`}
+      >
+        Save
+      </button>
       </div>
     </div>
   );
