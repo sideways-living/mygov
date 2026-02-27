@@ -240,28 +240,29 @@ export default function Profile() {
           <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
             <p className="font-semibold text-gray-800">Medicare Card</p>
 
-          <div>
-            <label className="block text-xs text-gray-500 mb-1">Card Number</label>
-            <input
-              type="text"
-              value={form.medicareNumber}
-              onChange={e => handle("medicareNumber", e.target.value)}
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-              placeholder="e.g. 2555 69143 6"
-            />
-          </div>
-
-          <div className="grid grid-cols-3 gap-3">
             <div>
-              <label className="block text-xs text-gray-500 mb-1">First Name</label>
+              <label className="block text-xs text-gray-500 mb-1">Medicare Number</label>
               <input
                 type="text"
-                value={form.medicareFirstName}
-                onChange={e => handle("medicareFirstName", e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-                placeholder="e.g. Daniel"
+                value={form.medicareNumber}
+                onChange={e => handle("medicareNumber", e.target.value.replace(/[^\d\s]/g, ""))}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. 2555 69143 6"
               />
             </div>
+
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Card Position Number</label>
+              <input
+                type="text"
+                value={form.medicareCardPosition}
+                onChange={e => handle("medicareCardPosition", e.target.value.replace(/\D/g, "").slice(0, 1))}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. 1"
+                maxLength="1"
+              />
+            </div>
+
             <div>
               <label className="block text-xs text-gray-500 mb-1">Middle Initial</label>
               <input
@@ -273,38 +274,57 @@ export default function Profile() {
                 maxLength="1"
               />
             </div>
+
             <div>
-              <label className="block text-xs text-gray-500 mb-1">Last Name</label>
+              <label className="block text-xs text-gray-500 mb-1">Valid To</label>
               <input
                 type="text"
-                value={form.medicareLastName}
-                onChange={e => handle("medicareLastName", e.target.value)}
+                value={form.medicareValidTo}
+                onChange={e => handle("medicareValidTo", e.target.value.toUpperCase())}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-                placeholder="e.g. Greenyer"
+                placeholder="e.g. Jul 27"
               />
             </div>
           </div>
+        )}
 
-          <div>
-            <label className="block text-xs text-gray-500 mb-1">Position on Card</label>
-            <input
-              type="text"
-              value={form.medicarePosition}
-              onChange={e => handle("medicarePosition", e.target.value)}
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-              placeholder="e.g. 1"
-            />
-          </div>
+        {/* Pensioner Concession Card */}
+        {form.requiredCards?.pensionConcession && (
+          <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
+            <p className="font-semibold text-gray-800">Pensioner Concession Card</p>
 
-          <div>
-            <label className="block text-xs text-gray-500 mb-1">Valid To</label>
-            <input
-              type="text"
-              value={form.medicareValidTo}
-              onChange={e => handle("medicareValidTo", e.target.value)}
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-              placeholder="e.g. Jul 2027"
-            />
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">CRN</label>
+              <input
+                type="text"
+                value={form.pensionerCRN}
+                onChange={e => handle("pensionerCRN", e.target.value.toUpperCase().replace(/[^\d\w]/g, ""))}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. 123 456 789Y"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Start Date</label>
+              <input
+                type="text"
+                value={form.pensionerStartDate}
+                onChange={e => handle("pensionerStartDate", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. DD/MM/YYYY"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Expiry Date</label>
+              <input
+                type="text"
+                value={form.pensionerExpiryDate}
+                onChange={e => handle("pensionerExpiryDate", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. DD/MM/YYYY"
+              />
+            </div>
           </div>
         )}
 
