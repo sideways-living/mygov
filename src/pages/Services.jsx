@@ -8,7 +8,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
+    <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto">
       {/* Header */}
       <div className="bg-[#4dcfef] px-5 pt-10 pb-4">
         <div className="flex items-center justify-end gap-5 mb-1">
