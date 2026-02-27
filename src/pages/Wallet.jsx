@@ -1,6 +1,16 @@
 import { Pencil, Plus } from "lucide-react";
+import { useState, useEffect } from "react";
+import { getProfile } from "./Profile";
 
 export default function Wallet() {
+  const [profile, setProfile] = useState(getProfile);
+
+  useEffect(() => {
+    const onFocus = () => setProfile(getProfile());
+    window.addEventListener("focus", onFocus);
+    return () => window.removeEventListener("focus", onFocus);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
       {/* Header */}
