@@ -39,7 +39,7 @@ export default function Layout({ children, currentPageName }) {
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 max-w-sm mx-auto bg-white border-t border-gray-200 z-50">
         <div className="flex items-stretch">
-          {navItems.map(({ label, icon: Icon, page }) => {
+          {navItems.map(({ label, icon: Icon, page, custom }) => {
             const isActive = currentPageName === page;
             return (
               <Link
@@ -47,14 +47,18 @@ export default function Layout({ children, currentPageName }) {
                 to={createPageUrl(page)}
                 className="flex-1 flex flex-col items-center justify-center py-3 gap-1"
               >
-                <Icon
-                  size={22}
-                  style={
-                    isActive
-                      ? { fill: "#111827", stroke: "white", strokeWidth: 1.5 }
-                      : { fill: "#9ca3af", stroke: "white", strokeWidth: 1.5 }
-                  }
-                />
+                {custom === "home" ? (
+                  <HomeIcon active={isActive} />
+                ) : (
+                  <Icon
+                    size={22}
+                    style={
+                      isActive
+                        ? { fill: "#111827", stroke: "white", strokeWidth: 1.5 }
+                        : { fill: "#9ca3af", stroke: "white", strokeWidth: 1.5 }
+                    }
+                  />
+                )}
                 <span
                   className={`text-[10px] font-medium tracking-wide ${
                     isActive ? "text-gray-900" : "text-gray-400"
