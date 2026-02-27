@@ -23,12 +23,12 @@ export default function Home() {
             </div>
             <span className="text-black font-semibold text-xl tracking-tight">myGov</span>
           </div>
-          <button className="text-black">
+          <Link to={createPageUrl("Profile")} className="text-black">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
               <circle cx="12" cy="8" r="4" />
               <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
             </svg>
-          </button>
+          </Link>
         </div>
         {/* Concave curve bottom-right: teal outer, body-colour quarter circle */}
         <svg
