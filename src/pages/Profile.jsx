@@ -59,16 +59,52 @@ export default function Profile() {
         </div>
 
         {/* Medicare */}
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <p className="font-semibold text-gray-800 mb-3">Medicare Card</p>
-          <label className="block text-xs text-gray-500 mb-1">Card Number</label>
-          <input
-            type="text"
-            value={form.medicareNumber}
-            onChange={e => handle("medicareNumber", e.target.value)}
-            className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-            placeholder="e.g. .... ..143 b"
-          />
+        <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
+          <p className="font-semibold text-gray-800">Medicare Card</p>
+
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Card Number</label>
+            <input
+              type="text"
+              value={form.medicareNumber}
+              onChange={e => handle("medicareNumber", e.target.value)}
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+              placeholder="e.g. 2555 69143 6"
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Name on Card</label>
+            <input
+              type="text"
+              value={form.medicareName}
+              onChange={e => handle("medicareName", e.target.value)}
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+              placeholder="e.g. Daniel Greenyer"
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Position on Card</label>
+            <input
+              type="text"
+              value={form.medicarePosition}
+              onChange={e => handle("medicarePosition", e.target.value)}
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+              placeholder="e.g. 1"
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">Valid To</label>
+            <input
+              type="text"
+              value={form.medicareValidTo}
+              onChange={e => handle("medicareValidTo", e.target.value)}
+              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+              placeholder="e.g. Jul 2027"
+            />
+          </div>
         </div>
       </div>
     </div>
