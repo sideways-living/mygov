@@ -43,9 +43,11 @@ export default function Wallet() {
               </svg>
             </div>
             <p className="text-white text-xl font-semibold mb-12">Organ donor card</p>
-            <div className="inline-block bg-white rounded-full px-4 py-1.5 mt-2">
-              <span className="text-[#e91e8c] text-sm font-semibold">I am registered as an organ donor.</span>
-            </div>
+            {profile.organDonor && (
+              <div className="inline-block bg-white rounded-full px-4 py-1.5 mt-2">
+                <span className="text-[#e91e8c] text-sm font-semibold">I am registered as an organ donor.</span>
+              </div>
+            )}
           </div>
         </div>
 
