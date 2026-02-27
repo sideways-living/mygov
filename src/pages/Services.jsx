@@ -22,7 +22,7 @@ export default function Services() {
       <div className="flex-1 pb-24 bg-white">
         {/* Forms and Applications */}
         <div className="mx-auto mt-4" style={{ width: "95%" }}>
-          <div className="bg-gray-100 rounded-lg px-4 py-4 flex items-center justify-between">
+          <div className="bg-gray-100 px-4 py-4 flex items-center justify-between">
             <span className="text-gray-900 text-sm">Forms and Applications</span>
             <ChevronRight size={18} className="text-gray-400" />
           </div>
