@@ -74,6 +74,10 @@ export default function Layout({ children, currentPageName }) {
               >
                 {custom === "home" ? (
                   <HomeIcon active={isActive} />
+                ) : custom === "mail" ? (
+                  <MailIcon active={isActive} />
+                ) : custom === "services" ? (
+                  <ServicesIcon active={isActive} />
                 ) : (
                   <Icon
                     size={22}
