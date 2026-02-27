@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto relative">
       {/* Cyan Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-8 rounded-b-3xl relative z-10">
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-8 relative z-10" style={{borderBottomRightRadius: 0}}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             {/* myGov play button logo */}
@@ -28,6 +28,16 @@ export default function Home() {
             </svg>
           </button>
         </div>
+        {/* Concave curve bottom-right: teal bites into the body corner */}
+        <svg
+          className="absolute bottom-0 right-0 translate-y-full"
+          width="36" height="36"
+          viewBox="0 0 36 36"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0 Q36 0 36 36 L0 36 Z" fill="#4dcfef" />
+        </svg>
       </div>
 
       {/* Main content */}
