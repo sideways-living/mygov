@@ -55,6 +55,7 @@ import MessageMyHealth from './pages/MessageMyHealth';
 import Profile from './pages/Profile';
 import Services from './pages/Services';
 import Wallet from './pages/Wallet';
+import VerifyCard from './pages/VerifyCard';
 import __Layout from './Layout.jsx';
 
 
@@ -67,6 +68,7 @@ export const PAGES = {
     "Profile": Profile,
     "Services": Services,
     "Wallet": Wallet,
+    "VerifyCard": VerifyCard,
 }
 
 export const pagesConfig = {
