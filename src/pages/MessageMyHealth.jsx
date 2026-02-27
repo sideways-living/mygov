@@ -33,7 +33,7 @@ export default function MessageMyHealth() {
         </div>
 
         <div className="border-t border-gray-200 mt-3 pt-4 text-sm text-gray-800 space-y-4 leading-relaxed">
-          <p>Dear DANIEL</p>
+          <p>Dear {firstName}</p>
           <p>A new myGov account has been linked to your My Health Record and can be used to access your information.</p>
           <p>The myGov account that was previously linked has been 'de-linked'.</p>
           <p>If you did not create the new myGov link, please contact the My Health Record Help line immediately on 1800 723 471.</p>
