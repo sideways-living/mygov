@@ -9,6 +9,7 @@ const messages = [
     date: "21/6/2025",
     subject: "A new myGov account has been linked to your My Health Record",
     hasAttachment: false,
+    page: "MessageMyHealth",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const messages = [
     date: "4/5/2025",
     subject: "Important information about your myGov account",
     hasAttachment: true,
+    page: "MessageMyGov",
   },
 ];
 
