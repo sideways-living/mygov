@@ -219,17 +219,19 @@ export default function Profile() {
         </div>
         {/* Organ Donor */}
         {form.requiredCards?.organ && (
-          <div className="bg-white rounded-xl p-4 shadow-sm">
-            <p className="font-semibold text-gray-800 mb-3">Organ Donor Card</p>
-            <label className="flex items-center gap-3 cursor-pointer">
+          <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
+            <p className="font-semibold text-gray-800">Organ Donor Card</p>
+
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Donor ID</label>
               <input
-                type="checkbox"
-                checked={form.organDonor}
-                onChange={e => handle("organDonor", e.target.checked)}
-                className="w-5 h-5 accent-pink-600"
+                type="text"
+                value={form.organDonorID}
+                onChange={e => handle("organDonorID", e.target.value.toUpperCase())}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. A12-345-678"
               />
-              <span className="text-sm text-gray-700">I am registered as an organ donor</span>
-            </label>
+            </div>
           </div>
         )}
 
