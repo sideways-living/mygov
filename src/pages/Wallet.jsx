@@ -55,7 +55,7 @@ export default function Wallet() {
         </div>
 
         {/* Medicare Card */}
-        <div className="rounded-2xl overflow-hidden shadow-sm" style={{ background: "#8fca8f", minHeight: 140 }}>
+        <div className="rounded-2xl overflow-hidden shadow-sm cursor-pointer" style={{ background: "#8fca8f", minHeight: 140 }} onClick={() => navigate(createPageUrl("MedicareCard"))}>
           <div className="p-5">
             <div className="flex items-start justify-between mb-4">
               <p className="text-gray-900 text-xl font-semibold">Medicare card</p>
