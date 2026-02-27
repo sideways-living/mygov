@@ -32,17 +32,15 @@ export default function Layout({ children, currentPageName }) {
               >
                 <Icon
                   size={22}
-                  strokeWidth={isActive ? 2.2 : 1.5}
                   style={
                     isActive
-                      ? undefined
-                      : { fill: "#6b7280", stroke: "white", strokeWidth: 1.5 }
+                      ? { fill: "#111827", stroke: "white", strokeWidth: 1.5 }
+                      : { fill: "#9ca3af", stroke: "white", strokeWidth: 1.5 }
                   }
-                  className={isActive ? "text-gray-900" : ""}
                 />
                 <span
                   className={`text-[10px] font-medium tracking-wide ${
-                    isActive ? "text-gray-900" : "text-gray-600"
+                    isActive ? "text-gray-900" : "text-gray-400"
                   }`}
                 >
                   {label}
