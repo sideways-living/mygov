@@ -77,10 +77,10 @@ export default function PINEntry({ onSuccess, onBack }) {
           <button
             key={num}
             onClick={() => handleNumberClick(num.toString())}
-            className="bg-black text-white py-2 rounded-md font-semibold text-xl"
+            className="bg-black text-white py-1 rounded-md font-semibold text-xl flex flex-col gap-0.5"
           >
             <div>{num}</div>
-            <div className="text-xs opacity-75">
+            <div className="text-xs opacity-75 leading-none">
               {num === 1 && ""}
               {num === 2 && "ABC"}
               {num === 3 && "DEF"}
@@ -98,14 +98,14 @@ export default function PINEntry({ onSuccess, onBack }) {
         <div className="col-start-2">
           <button
             onClick={() => handleNumberClick("0")}
-            className="w-full bg-black text-white py-2 rounded-md font-semibold text-xl"
+            className="w-full bg-black text-white py-1 rounded-md font-semibold text-xl"
           >
             0
           </button>
         </div>
         <button
           onClick={handleBackspace}
-          className="flex items-center justify-center text-2xl py-2"
+          className="flex items-center justify-center text-2xl py-1"
         >
           <span style={{fontSize: '24px', color: 'black', fontWeight: 'bold'}}>⌫</span>
         </button>
