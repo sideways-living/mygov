@@ -357,6 +357,35 @@ export default function Profile() {
           </div>
         </div>
       </div>
+
+      {/* Save Button */}
+      <div className="fixed bottom-20 left-0 right-0 px-4 py-4 flex justify-center">
+        <button
+          onClick={handleSave}
+          disabled={saveState === "saving" || saveState === "saved"}
+          className={`w-full max-w-sm py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+            saveState === "saved"
+              ? "bg-green-500 text-white"
+              : saveState === "saving"
+              ? "bg-gray-400 text-white"
+              : "bg-black text-white hover:bg-gray-900"
+          }`}
+        >
+          {saveState === "idle" && "Save"}
+          {saveState === "saving" && (
+            <>
+              <RotateCcw size={18} className="animate-spin" />
+              Saving
+            </>
+          )}
+          {saveState === "saved" && (
+            <>
+              <Check size={18} />
+              Saved
+            </>
+          )}
+        </button>
+      </div>
     </div>
   );
 }
