@@ -28,7 +28,7 @@ export default function Home() {
             </svg>
           </button>
         </div>
-        {/* Concave curve bottom-right: teal bites into the body corner */}
+        {/* Concave curve bottom-right: teal outer, body-colour quarter circle */}
         <svg
           className="absolute bottom-0 right-0 translate-y-full"
           width="36" height="36"
@@ -36,7 +36,10 @@ export default function Home() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 0 Q36 0 36 36 L0 36 Z" fill="#4dcfef" />
+          {/* Teal background square */}
+          <rect width="36" height="36" fill="#4dcfef" />
+          {/* Body-colour quarter circle cuts out the corner */}
+          <path d="M0 0 Q36 0 36 36 L0 36 Z" fill="#f0f0f0" />
         </svg>
       </div>
 
