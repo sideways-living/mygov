@@ -8,7 +8,7 @@ export default function MessageMyHealth() {
   const firstName = profile.medicareFirstName.toUpperCase();
 
   return (
-    <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto">
+    <div className="min-h-screen bg-white flex flex-col w-screen">
       {/* Header */}
       <div className="bg-[#4dcfef] px-5 pt-10 pb-4">
         <div className="flex items-center justify-between mb-1">

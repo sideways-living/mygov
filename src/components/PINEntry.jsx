@@ -105,9 +105,9 @@ export default function PINEntry({ onSuccess, onBack }) {
         </div>
         <button
           onClick={handleBackspace}
-          className="bg-black text-white py-4 rounded-lg font-semibold text-xl flex items-center justify-center"
+          className="flex items-center justify-center text-2xl"
         >
-          ⌫
+          <span style={{fontSize: '24px', color: 'black', fontWeight: 'bold'}}>⌫</span>
         </button>
       </div>
       </div>

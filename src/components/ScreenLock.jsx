@@ -24,7 +24,7 @@ export default function ScreenLock({ onUnlock }) {
             className="h-8"
           />
           <div className="flex items-center gap-1.5">
-            <MyGovLogo size={20} />
+            <MyGovLogo size={32} />
             <span className="text-black font-semibold text-lg">myGov</span>
           </div>
         </div>
