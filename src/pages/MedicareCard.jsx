@@ -69,6 +69,7 @@ export default function MedicareCard() {
       <div className="mx-auto mt-3" style={{ width: "90%" }}>
         <div className="bg-gray-100 rounded-xl px-5 py-4 flex items-center justify-between cursor-pointer active:bg-gray-200">
           <span className="text-sm font-medium text-gray-800">Manage your card</span>
+
           <ArrowUpRight size={18} className="text-gray-600" />
         </div>
       </div>
