@@ -31,9 +31,11 @@ export default function VerifyCard() {
         {/* Barcode placeholder */}
         <div
           className="w-full rounded-2xl border-4 border-gray-300 flex items-center justify-center"
-          style={{ aspectRatio: "1.5", borderStyle: "dashed" }}
+          style={{ aspectRatio: "1", borderStyle: "dashed" }}
         >
-          <div className="w-3/4 h-3/4 border-2 border-gray-200 rounded-xl" />
+          {status === "loading" && (
+            <RefreshCw size={40} className="text-gray-300 animate-spin" />
+          )}
         </div>
 
         {/* Status message */}
