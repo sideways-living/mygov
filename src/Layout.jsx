@@ -101,14 +101,34 @@ export default function Layout({ children, currentPageName }) {
   return (
     <div className="relative min-h-screen bg-[#f0f0f0]">
       <style>{`
-        body { background: #f0f0f0; }
+        * { 
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+        }
+        html, body { 
+          background: #f0f0f0;
+          overflow: hidden;
+          height: 100%;
+          width: 100%;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+        @supports (viewport-fit: cover) {
+          body {
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+          }
+        }
       `}</style>
 
       {/* Page content */}
       <div>{children}</div>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 max-w-sm mx-auto bg-white border-t border-gray-200 z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 w-screen">
         <div className="flex items-stretch">
           {navItems.map(({ label, icon: Icon, page, custom }) => {
             const isActive = currentPageName === page;
