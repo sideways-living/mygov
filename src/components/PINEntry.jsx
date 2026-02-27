@@ -13,10 +13,6 @@ export default function PINEntry({ onSuccess, onBack }) {
       const newPin = pin + num;
       setPin(newPin);
       setError("");
-
-      if (newPin.length === maxLength) {
-        validatePIN(newPin);
-      }
     }
   };
 
