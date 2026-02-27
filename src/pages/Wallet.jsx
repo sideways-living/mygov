@@ -29,34 +29,45 @@ export default function Wallet() {
       <div className="flex-1 px-4 pt-5 pb-28 space-y-5">
 
         {/* Organ Donor Card */}
-        <div className="rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #e91e8c 0%, #c2185b 60%, #ad1457 100%)", minHeight: 180 }}>
-          <div className="relative p-5 h-full">
-            {/* Blob decoration */}
-            <div className="absolute bottom-0 left-0 w-40 h-32 rounded-full opacity-20" style={{ background: "#ff80ab", transform: "translate(-20%, 30%)" }} />
-            <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white flex items-center justify-center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="#e91e8c">
-                <path d="M12 21C12 21 3 14 3 8a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6-9 13-9 13z" />
-              </svg>
-            </div>
-            <p className="text-white text-xl font-semibold mb-12">Organ donor card</p>
-            {profile.organDonor && (
-              <div className="inline-block bg-white rounded-full px-4 py-1.5 mt-2">
-                <span className="text-[#e91e8c] text-sm font-semibold">I am registered as an organ donor.</span>
-              </div>
-            )}
-          </div>
+        <div className="rounded-2xl overflow-hidden shadow-sm" style={{ aspectRatio: "1.586" }}>
+          <img
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/39641633c_organdonor.jpg"
+            alt="Organ donor card"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Medicare Card */}
-        <div className="rounded-2xl overflow-hidden shadow-sm cursor-pointer" style={{ background: "#8fca8f", minHeight: 140 }} onClick={() => navigate(createPageUrl("MedicareCard"))}>
-          <div className="p-5">
-            <div className="flex items-start justify-between mb-4">
-              <p className="text-gray-900 text-xl font-semibold">Medicare card</p>
-              <div className="bg-[#007b40] rounded px-3 py-1">
-                <span className="text-white text-sm font-bold italic">medicare</span>
-              </div>
-            </div>
-            <p className="text-gray-800 text-2xl font-mono tracking-widest">{profile.medicareNumber}</p>
+        <div
+          className="rounded-2xl overflow-hidden shadow-sm cursor-pointer relative"
+          style={{ aspectRatio: "1.586" }}
+          onClick={() => navigate(createPageUrl("MedicareCard"))}
+        >
+          <img
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/37f9c6da5_medicarecard.png"
+            alt="Medicare card"
+            className="w-full h-full object-cover"
+          />
+          {/* Overlay last digits */}
+          <div className="absolute" style={{ bottom: "34%", left: "6%" }}>
+            <span
+              style={{
+                fontFamily: "'Courier New', Courier, monospace",
+                fontSize: "1.45rem",
+                fontWeight: "bold",
+                letterSpacing: "0.18em",
+                color: "#111",
+              }}
+            >
+              {(() => {
+                const num = (profile.medicareNumber || "").replace(/\s/g, "");
+                const last5 = num.slice(-5);
+                if (last5.length >= 4) {
+                  return `${last5.slice(0, 3)}  ${last5.slice(3)}`;
+                }
+                return last5;
+              })()}
+            </span>
           </div>
         </div>
 

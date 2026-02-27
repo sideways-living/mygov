@@ -47,26 +47,26 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
-import Wallet from './pages/Wallet';
-import Inbox from './pages/Inbox';
-import Services from './pages/Services';
 import Home from './pages/Home';
-import Profile from './pages/Profile';
+import Inbox from './pages/Inbox';
 import MedicareCard from './pages/MedicareCard';
-import MessageMyHealth from './pages/MessageMyHealth';
 import MessageMyGov from './pages/MessageMyGov';
+import MessageMyHealth from './pages/MessageMyHealth';
+import Profile from './pages/Profile';
+import Services from './pages/Services';
+import Wallet from './pages/Wallet';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
-    "Wallet": Wallet,
-    "Inbox": Inbox,
-    "Services": Services,
     "Home": Home,
-    "Profile": Profile,
+    "Inbox": Inbox,
     "MedicareCard": MedicareCard,
-    "MessageMyHealth": MessageMyHealth,
     "MessageMyGov": MessageMyGov,
+    "MessageMyHealth": MessageMyHealth,
+    "Profile": Profile,
+    "Services": Services,
+    "Wallet": Wallet,
 }
 
 export const pagesConfig = {
