@@ -4,9 +4,9 @@ export default function MyGovLogo({ size = 28 }) {
       <defs>
         <mask id="leftTriangleMask">
           {/* White rectangle covering the non-overlapping part */}
-          <rect x="0" y="0" width="95" height="200" fill="white" />
-          {/* Transparent rectangle for the overlapping part */}
-          <rect x="95" y="0" width="20" height="200" fill="black" />
+          <rect x="0" y="0" width="62" height="200" fill="white" />
+          {/* Transparent rectangle for the 50% overlapping part */}
+          <rect x="62" y="0" width="50" height="200" fill="black" />
         </mask>
       </defs>
       
@@ -19,7 +19,7 @@ export default function MyGovLogo({ size = 28 }) {
       
       {/* Right rounded triangle */}
       <path
-        d="M 95 10 Q 101 10 107 18 L 179 100 L 107 182 Q 101 190 95 190 Q 83 190 83 178 L 83 22 Q 83 10 95 10 Z"
+        d="M 62 10 Q 68 10 74 18 L 146 100 L 74 182 Q 68 190 62 190 Q 50 190 50 178 L 50 22 Q 50 10 62 10 Z"
         fill="black"
       />
     </svg>
