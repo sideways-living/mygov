@@ -184,7 +184,6 @@ export default function Profile() {
               placeholder="e.g. Jul 2027"
             />
           </div>
-        </div>
         )}
 
         {/* Screen Lock PIN */}
