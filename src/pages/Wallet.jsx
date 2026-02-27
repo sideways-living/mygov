@@ -52,7 +52,7 @@ export default function Wallet() {
             alt="Medicare card"
             className="w-full h-full object-cover"
           />
-          <div className="absolute" style={{ top: "27%", left: "30%" }}>
+          <div className="absolute" style={{ top: "26.5%", left: "29.5%" }}>
             <span
               style={{
                 fontFamily: "'Courier New', Courier, monospace",
