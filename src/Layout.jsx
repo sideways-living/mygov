@@ -128,8 +128,8 @@ export default function Layout({ children, currentPageName }) {
       <div>{children}</div>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 w-screen">
-        <div className="flex items-stretch px-2">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 w-screen flex justify-center">
+        <div className="flex items-stretch w-4/5">
           {navItems.map(({ label, icon: Icon, page, custom }) => {
             const isActive = currentPageName === page;
             return (
