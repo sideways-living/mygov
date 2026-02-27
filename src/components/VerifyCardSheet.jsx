@@ -84,7 +84,7 @@ export default function VerifyCardSheet({ open, onClose }) {
           {status === "error" && (
             <button
               onClick={startLoad}
-              className="flex items-center gap-2 border border-black rounded-xl px-5 py-3 text-sm font-semibold text-black active:bg-gray-50"
+              className="flex items-center gap-2 border border-black rounded-lg px-5 py-3 text-sm font-semibold text-black active:bg-gray-50"
             >
               <RefreshCw size={16} />
               Refresh
