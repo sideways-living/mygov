@@ -1,9 +1,7 @@
 import { ChevronLeft, Folder } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import { getProfile } from "./Profile";
 
-export default function MessageMyHealth() {
-  const navigate = useNavigate();
+export default function MessageMyHealth({ onClose }) {
   const profile = getProfile();
   const firstName = profile.medicareFirstName.toUpperCase();
 
@@ -12,7 +10,7 @@ export default function MessageMyHealth() {
       {/* Header */}
       <div className="bg-[#4dcfef] px-5 pt-10 pb-4">
         <div className="flex items-center justify-between mb-1">
-          <button onClick={() => navigate(-1)} className="text-black">
+          <button onClick={onClose} className="text-black">
             <ChevronLeft size={24} />
           </button>
           <Folder size={24} className="text-black" />
