@@ -11,5 +11,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Your page content -->
+<script>
+// Force set the theme color after page loads
+window.addEventListener('load', function() {
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+  if (metaTheme) {
+    metaTheme.content = '#4dcfef';
+  } else {
+    const meta = document.createElement('meta');
+    meta.name = 'theme-color';
+    meta.content = '#4dcfef';
+    document.head.appendChild(meta);
+  }
+});
+</script>
   </body>
 </html>
