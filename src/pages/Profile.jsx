@@ -114,8 +114,9 @@ export default function Profile() {
         )}
 
         {/* Medicare */}
-        <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
-          <p className="font-semibold text-gray-800">Medicare Card</p>
+        {form.requiredCards?.medicare && (
+          <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
+            <p className="font-semibold text-gray-800">Medicare Card</p>
 
           <div>
             <label className="block text-xs text-gray-500 mb-1">Card Number</label>
