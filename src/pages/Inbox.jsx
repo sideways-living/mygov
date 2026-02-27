@@ -106,6 +106,8 @@ export default function Inbox() {
           </div>
         ))}
       </div>
+
+      <MessageSlide message={selectedMessage} onClose={() => setSelectedMessage(null)} />
     </div>
   );
 }
