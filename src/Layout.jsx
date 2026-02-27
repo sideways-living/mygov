@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Home, CreditCard, Mail, LayoutGrid } from "lucide-react";
+import { Home, ClipboardList, Mail, LayoutGrid } from "lucide-react";
 
 const navItems = [
   { label: "Home", icon: Home, page: "Home" },
-  { label: "Wallet", icon: CreditCard, page: "Wallet" },
+  { label: "Wallet", icon: ClipboardList, page: "Wallet" },
   { label: "Inbox", icon: Mail, page: "Inbox" },
   { label: "Services", icon: LayoutGrid, page: "Services" },
 ];
