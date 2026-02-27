@@ -114,6 +114,7 @@ export default function MedicareCardSheet({ open, onClose, profile }) {
           <p className="text-center text-xs text-gray-400 mt-6">Last updated {lastUpdated}</p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
