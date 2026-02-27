@@ -48,7 +48,7 @@ export default function PINEntry({ onSuccess, onBack }) {
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col items-center justify-center gap-6">
+      <div className="flex-1 flex flex-col items-center justify-center gap-3">
         <div className="flex flex-col items-center gap-2">
           <p className="text-black text-sm">Enter your myGov app</p>
           <h1 className="text-black text-4xl font-bold">PIN</h1>
@@ -77,7 +77,7 @@ export default function PINEntry({ onSuccess, onBack }) {
           <button
             key={num}
             onClick={() => handleNumberClick(num.toString())}
-            className="bg-black text-white py-4 rounded-lg font-semibold text-xl"
+            className="bg-black text-white py-3 rounded-lg font-semibold text-xl"
           >
             <div>{num}</div>
             <div className="text-xs opacity-75">
@@ -98,14 +98,14 @@ export default function PINEntry({ onSuccess, onBack }) {
         <div className="col-start-2">
           <button
             onClick={() => handleNumberClick("0")}
-            className="w-full bg-black text-white py-4 rounded-lg font-semibold text-xl"
+            className="w-full bg-black text-white py-3 rounded-lg font-semibold text-xl"
           >
             0
           </button>
         </div>
         <button
           onClick={handleBackspace}
-          className="flex items-center justify-center text-2xl"
+          className="flex items-center justify-center text-2xl py-3"
         >
           <span style={{fontSize: '24px', color: 'black', fontWeight: 'bold'}}>⌫</span>
         </button>
