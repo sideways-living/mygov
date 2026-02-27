@@ -20,7 +20,7 @@ export default function VerifyCardSheet({ open, onClose }) {
 
   const startLoad = () => {
     setStatus("loading");
-    setTimeout(() => setStatus("error"), 2000);
+    setTimeout(() => setStatus("error"), 3000);
   };
 
   useEffect(() => {
