@@ -71,11 +71,11 @@ export default function Inbox() {
       {/* Pull-to-reveal search bar — teal extension */}
       <div
         className="bg-[#4dcfef] overflow-hidden transition-all duration-200 flex items-center justify-center"
-        style={{ height: revealed ? 56 : searchBarHeight, opacity: searchBarOpacity }}
+        style={{ height: revealed ? 44 : searchBarHeight, opacity: searchBarOpacity }}
       >
-        <div className="flex items-center gap-2 bg-white/30 rounded-full px-4 py-2" style={{ width: "95%" }}>
-          <Search size={16} className="text-black/60 flex-shrink-0" />
-          <span className="text-black/60 text-sm">Search</span>
+        <div className="flex items-center gap-2 bg-white rounded-md px-3 py-1.5" style={{ width: "90%" }}>
+          <Search size={15} className="text-gray-400 flex-shrink-0" />
+          <span className="text-gray-400 text-sm">Search</span>
         </div>
       </div>
 
