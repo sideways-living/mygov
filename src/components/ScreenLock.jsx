@@ -15,10 +15,46 @@ export default function ScreenLock({ onUnlock }) {
   return (
     <div className="fixed inset-0 z-[9999] bg-[#4dcfef] flex flex-col items-center justify-center w-screen">
 
-      {/* Header logo */}
-      <div className="absolute top-6 left-5 right-5 flex items-center gap-2">
-        <MyGovLogo size={28} />
-        <span className="text-black font-semibold text-xl">myGov</span>
+      {/* Header */}
+      <div className="absolute top-0 left-0 right-0 bg-[#4dcfef] px-5 py-4 flex items-center justify-between border-b border-[#3ba5c4]">
+        <div className="flex items-center gap-3">
+          <img
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/3c6918d20_australian_government_transparent_background.png"
+            alt="Australian Government"
+            className="h-8"
+          />
+          <div className="flex items-center gap-1.5">
+            <MyGovLogo size={20} />
+            <span className="text-black font-semibold text-lg">myGov</span>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-3">
+          {/* 3D Barcode icon */}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="3" height="6" fill="black" />
+            <rect x="7" y="4" width="2" height="6" fill="black" />
+            <rect x="10" y="4" width="3" height="6" fill="black" />
+            <rect x="14" y="4" width="2" height="6" fill="black" />
+            <rect x="17" y="4" width="3" height="6" fill="black" />
+            <rect x="3" y="11" width="3" height="2" fill="black" />
+            <rect x="7" y="11" width="2" height="2" fill="black" />
+            <rect x="10" y="11" width="3" height="2" fill="black" />
+            <rect x="14" y="11" width="2" height="2" fill="black" />
+            <rect x="17" y="11" width="3" height="2" fill="black" />
+            <rect x="4" y="14" width="2" height="5" fill="black" />
+            <rect x="7" y="14" width="3" height="5" fill="black" />
+            <rect x="11" y="14" width="2" height="5" fill="black" />
+            <rect x="14" y="14" width="3" height="5" fill="black" />
+            <rect x="18" y="14" width="2" height="5" fill="black" />
+          </svg>
+          
+          {/* Info icon */}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="black" strokeWidth="2" />
+            <text x="12" y="16" textAnchor="middle" fontSize="16" fontWeight="bold" fill="black">i</text>
+          </svg>
+        </div>
       </div>
 
       {/* Welcome message */}
