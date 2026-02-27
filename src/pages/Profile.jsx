@@ -75,7 +75,7 @@ export default function Profile() {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-3 gap-3">
             <div>
               <label className="block text-xs text-gray-500 mb-1">First Name</label>
               <input
@@ -84,6 +84,17 @@ export default function Profile() {
                 onChange={e => handle("medicareFirstName", e.target.value)}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
                 placeholder="e.g. Daniel"
+              />
+            </div>
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Middle Initial</label>
+              <input
+                type="text"
+                value={form.medicareMiddleInitial}
+                onChange={e => handle("medicareMiddleInitial", e.target.value.slice(0, 1).toUpperCase())}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. A"
+                maxLength="1"
               />
             </div>
             <div>
