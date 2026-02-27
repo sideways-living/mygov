@@ -90,7 +90,7 @@ export default function Inbox() {
           <div
             key={msg.id}
             className="px-4 py-4 border-b border-gray-200 flex items-center justify-between gap-2 cursor-pointer active:bg-gray-50"
-            onClick={() => navigate(createPageUrl(msg.page))}
+            onClick={() => setSelectedMessage(msg)}
           >
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between mb-1">
