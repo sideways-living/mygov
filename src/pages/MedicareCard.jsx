@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { X, MoreHorizontal, QrCode, ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { createPageUrl } from "@/utils";
 import { getProfile } from "./Profile";
 import { format } from "date-fns";
 
