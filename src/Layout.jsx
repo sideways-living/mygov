@@ -19,11 +19,36 @@ const HomeIcon = ({ active }) => {
   );
 };
 
+const MailIcon = ({ active }) => {
+  const fill = active ? "#111827" : "#9ca3af";
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      {/* Envelope body */}
+      <rect x="2" y="5" width="20" height="14" rx="1" fill={fill} />
+      {/* X lines */}
+      <line x1="2" y1="5" x2="12" y2="13" stroke="white" strokeWidth="1.5" />
+      <line x1="22" y1="5" x2="12" y2="13" stroke="white" strokeWidth="1.5" />
+    </svg>
+  );
+};
+
+const ServicesIcon = ({ active }) => {
+  const fill = active ? "#111827" : "#9ca3af";
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <rect x="2" y="2" width="9" height="9" rx="1" fill={fill} />
+      <rect x="13" y="2" width="9" height="9" rx="1" fill={fill} />
+      <rect x="2" y="13" width="9" height="9" rx="1" fill={fill} />
+      <rect x="13" y="13" width="9" height="9" rx="1" fill={fill} />
+    </svg>
+  );
+};
+
 const navItems = [
   { label: "Home", icon: null, page: "Home", custom: "home" },
   { label: "Wallet", icon: ClipboardList, page: "Wallet" },
-  { label: "Inbox", icon: Mail, page: "Inbox" },
-  { label: "Services", icon: LayoutGrid, page: "Services" },
+  { label: "Inbox", icon: null, page: "Inbox", custom: "mail" },
+  { label: "Services", icon: null, page: "Services", custom: "services" },
 ];
 
 export default function Layout({ children, currentPageName }) {
