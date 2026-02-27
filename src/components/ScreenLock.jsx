@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getProfile } from "@/pages/Profile";
 import PINEntry from "./PINEntry";
+import MyGovLogo from "./MyGovLogo";
 
 export default function ScreenLock({ onUnlock }) {
   const [showPINEntry, setShowPINEntry] = useState(false);
@@ -16,7 +17,7 @@ export default function ScreenLock({ onUnlock }) {
 
       {/* Header logo */}
       <div className="absolute top-6 left-5 right-5 flex items-center gap-2">
-        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/a029d6159_mygovapplogo.png" alt="myGov" width="28" height="28" />
+        <MyGovLogo size={28} />
         <span className="text-black font-semibold text-xl">myGov</span>
       </div>
 

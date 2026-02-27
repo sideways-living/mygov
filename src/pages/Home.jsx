@@ -4,6 +4,7 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { getProfile } from "./Profile";
+import MyGovLogo from "@/components/MyGovLogo";
 
 export default function Home() {
   const profile = getProfile();
@@ -16,7 +17,7 @@ export default function Home() {
       <div className="bg-[#4dcfef] px-5 pt-10 pb-8 relative z-10 w-screen" style={{borderBottomRightRadius: 0}}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/a029d6159_mygovapplogo.png" alt="myGov" width="28" height="28" />
+            <MyGovLogo size={28} />
             <span className="text-black font-semibold text-xl tracking-tight">myGov</span>
           </div>
           <Link to={createPageUrl("Profile")} className="text-black">
