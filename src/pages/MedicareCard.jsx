@@ -43,7 +43,7 @@ export default function MedicareCard() {
         </div>
 
         {/* Card details */}
-        <div className="bg-white rounded-b-xl border border-gray-200 px-5 py-3 relative overflow-hidden">
+        <div className="bg-white rounded-b-lg border border-gray-200 px-5 py-3 relative overflow-hidden">
           {/* Watermark */}
           <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none opacity-10" style={{ gap: 8 }}>
             {[...Array(4)].map((_, i) => (
