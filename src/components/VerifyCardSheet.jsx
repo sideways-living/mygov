@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { X, RefreshCw } from "lucide-react";
+import { X, RefreshCw, AlertCircle } from "lucide-react";
 
 export default function VerifyCardSheet({ open, onClose }) {
   const [visible, setVisible] = useState(false);
