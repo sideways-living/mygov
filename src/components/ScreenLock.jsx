@@ -42,7 +42,7 @@ export default function ScreenLock({ onUnlock }) {
         </button>
         <button
           onClick={() => {}} 
-          className="w-full text-black text-base font-medium"
+          className="w-full text-black text-base font-normal"
         >
           Sign in as someone else
         </button>
