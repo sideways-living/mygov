@@ -16,7 +16,7 @@ export default function ScreenLock({ onUnlock }) {
     <div className="fixed inset-0 z-[9999] bg-[#4dcfef] flex flex-col items-center justify-center w-screen">
 
       {/* Header */}
-      <div className="absolute top-0 left-0 right-0 bg-[#4dcfef] px-5 py-4 flex items-center justify-between border-b border-[#3ba5c4]">
+      <div className="absolute top-0 left-0 right-0 px-5 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.1113 57.3535" className="h-8">
             <g>
