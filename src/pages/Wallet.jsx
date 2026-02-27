@@ -49,20 +49,9 @@ export default function Wallet() {
             className="w-full h-full object-cover"
           />
           {/* Overlay last digits — positioned after the 6 dots on the card */}
-          <div className="absolute" style={{ top: "24%", left: "30%" }}>
-            <span
-              style={{
-                fontFamily: "'Courier New', Courier, monospace",
-                fontSize: "1.15rem",
-                fontWeight: "bold",
-                letterSpacing: "0.15em",
-                color: "#111",
-              }}
-            >
-              {(() => {
-                const num = (profile.medicareNumber || "").replace(/\s/g, "");
-                const last4 = num.slice(-4);
-                return `${last4.slice(0, 3)}  ${last4.slice(3)}`;
+          <div className="absolute" style={{ top: "27%", left: "30%" }}>
+...
+                return `${last4.slice(0, 3)} ${last4.slice(3)}`;
               })()}
             </span>
           </div>
