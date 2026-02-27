@@ -1,9 +1,26 @@
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Home, ClipboardList, Mail, LayoutGrid } from "lucide-react";
+import { ClipboardList, Mail, LayoutGrid } from "lucide-react";
+
+const HomeIcon = ({ active }) => {
+  const fill = active ? "#111827" : "#9ca3af";
+  const stroke = "white";
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill={fill}>
+      {/* Chimney */}
+      <rect x="14" y="2" width="3" height="5" fill={fill} />
+      {/* Roof */}
+      <polygon points="2,12 12,3 22,12" fill={fill} />
+      {/* Body */}
+      <rect x="4" y="11" width="16" height="11" fill={fill} />
+      {/* Door */}
+      <rect x="9.5" y="16" width="5" height="6" fill={stroke} />
+    </svg>
+  );
+};
 
 const navItems = [
-  { label: "Home", icon: Home, page: "Home" },
+  { label: "Home", icon: null, page: "Home", custom: "home" },
   { label: "Wallet", icon: ClipboardList, page: "Wallet" },
   { label: "Inbox", icon: Mail, page: "Inbox" },
   { label: "Services", icon: LayoutGrid, page: "Services" },
