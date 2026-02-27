@@ -4,13 +4,30 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
 const DEFAULTS = {
-  organDonor: true,
+  // Common profile information
+  firstName: "Daniel",
+  middleName: "",
+  surname: "Greenyer",
+  address1: "",
+  address2: "",
+  suburb: "",
+  state: "NSW",
+  postcode: "",
+  
+  // Medicare card
   medicareNumber: "2555 69143 6",
-  medicareFirstName: "Daniel",
+  medicareCardPosition: "1",
   medicareMiddleInitial: "",
-  medicareLastName: "Greenyer",
-  medicarePosition: "1",
-  medicareValidTo: "Jul 2027",
+  medicareValidTo: "Jul 27",
+  
+  // Pensioner Concession card
+  pensionerCRN: "",
+  pensionerStartDate: "",
+  pensionerExpiryDate: "",
+  
+  // Organ Donor card
+  organDonorID: "",
+  
   screenLockPin: "",
   requiredCards: {
     pensionConcession: false,
