@@ -98,18 +98,20 @@ export default function Profile() {
           </div>
         </div>
         {/* Organ Donor */}
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <p className="font-semibold text-gray-800 mb-3">Organ Donor Card</p>
-          <label className="flex items-center gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={form.organDonor}
-              onChange={e => handle("organDonor", e.target.checked)}
-              className="w-5 h-5 accent-pink-600"
-            />
-            <span className="text-sm text-gray-700">I am registered as an organ donor</span>
-          </label>
-        </div>
+        {form.requiredCards?.organ && (
+          <div className="bg-white rounded-xl p-4 shadow-sm">
+            <p className="font-semibold text-gray-800 mb-3">Organ Donor Card</p>
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={form.organDonor}
+                onChange={e => handle("organDonor", e.target.checked)}
+                className="w-5 h-5 accent-pink-600"
+              />
+              <span className="text-sm text-gray-700">I am registered as an organ donor</span>
+            </label>
+          </div>
+        )}
 
         {/* Medicare */}
         <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
