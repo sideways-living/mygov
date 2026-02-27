@@ -49,7 +49,7 @@ export default function Wallet() {
             className="w-full h-full object-cover"
           />
           {/* Overlay last digits — positioned after the 6 dots on the card */}
-          <div className="absolute" style={{ top: "30%", left: "36%" }}>
+          <div className="absolute" style={{ top: "22%", left: "33%" }}>
             <span
               style={{
                 fontFamily: "'Courier New', Courier, monospace",
@@ -61,11 +61,8 @@ export default function Wallet() {
             >
               {(() => {
                 const num = (profile.medicareNumber || "").replace(/\s/g, "");
-                const last5 = num.slice(-5);
-                if (last5.length >= 4) {
-                  return `${last5.slice(0, 3)}  ${last5.slice(3)}`;
-                }
-                return last5;
+                const last4 = num.slice(-4);
+                return `${last4.slice(0, 3)}  ${last4.slice(3)}`;
               })()}
             </span>
           </div>
