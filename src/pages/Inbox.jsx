@@ -61,7 +61,7 @@ export default function Inbox() {
   return (
     <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto overflow-hidden">
       {/* Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-4" style={{ minHeight: 110 }}>
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-0" style={{ minHeight: 110 }}>
         <div className="flex items-center justify-end gap-5 mb-1">
           <Folder size={24} className="text-black" />
         </div>
