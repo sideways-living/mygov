@@ -67,8 +67,8 @@ export default function Layout({ children, currentPageName }) {
   useEffect(() => {
     // Set statusbar color based on page
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    const teaHeaderPages = ["Profile"];
-    if (teaHeaderPages.includes(currentPageName)) {
+    const tealHeaderPages = ["Profile", "Home", "Wallet", "Inbox", "Services"];
+    if (tealHeaderPages.includes(currentPageName)) {
       themeColor.setAttribute('content', '#4dcfef');
     } else {
       themeColor.setAttribute('content', '#f0f0f0');
