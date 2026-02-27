@@ -54,6 +54,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import MedicareCard from './pages/MedicareCard';
 import MessageMyHealth from './pages/MessageMyHealth';
+import MessageMyGov from './pages/MessageMyGov';
 import __Layout from './Layout.jsx';
 
 
@@ -65,6 +66,7 @@ export const PAGES = {
     "Profile": Profile,
     "MedicareCard": MedicareCard,
     "MessageMyHealth": MessageMyHealth,
+    "MessageMyGov": MessageMyGov,
 }
 
 export const pagesConfig = {
