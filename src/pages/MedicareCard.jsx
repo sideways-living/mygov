@@ -34,7 +34,7 @@ export default function MedicareCard() {
       <div className="mx-auto mt-4" style={{ width: "90%" }}>
         {/* Green header */}
         <div
-          className="px-6 py-4 flex items-center justify-center rounded-t-xl"
+          className="px-6 py-4 flex items-center justify-center rounded-t-lg"
           style={{
             background: "repeating-linear-gradient(45deg, #8fca8f, #8fca8f 2px, #7dbf7d 2px, #7dbf7d 8px)",
           }}
