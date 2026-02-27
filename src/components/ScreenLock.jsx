@@ -58,7 +58,7 @@ export default function ScreenLock({ onUnlock }) {
       </div>
 
       {/* Welcome message */}
-      <div className="flex-1 flex flex-col items-center justify-center gap-4">
+      <div className="flex-1 flex flex-col items-center justify-center gap-4 mt-12">
         <p className="text-black text-lg">Welcome back</p>
         <h1 className="text-black text-5xl font-bold">{firstName}</h1>
       </div>
