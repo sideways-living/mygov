@@ -12,6 +12,11 @@ const DEFAULTS = {
   medicarePosition: "1",
   medicareValidTo: "Jul 2027",
   screenLockPin: "",
+  requiredCards: {
+    pensionConcession: false,
+    medicare: true,
+    organ: true,
+  },
 };
 
 export function getProfile() {
