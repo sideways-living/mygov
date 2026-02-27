@@ -11,9 +11,9 @@ export default function Home() {
   const lastSigned = new Date();
 
   return (
-    <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto relative">
+    <div className="min-h-screen bg-[#f0f0f0] flex flex-col w-screen relative">
       {/* Cyan Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-8 relative z-10" style={{borderBottomRightRadius: 0}}>
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-8 relative z-10 w-screen" style={{borderBottomRightRadius: 0}}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             {/* myGov play button logo */}
