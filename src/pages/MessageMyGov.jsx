@@ -1,15 +1,12 @@
 import { ChevronLeft, Folder } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
-export default function MessageMyGov() {
-  const navigate = useNavigate();
-
+export default function MessageMyGov({ onClose }) {
   return (
     <div className="min-h-screen bg-white flex flex-col w-screen">
       {/* Header */}
       <div className="bg-[#4dcfef] px-5 pt-10 pb-4">
         <div className="flex items-center justify-between mb-1">
-          <button onClick={() => navigate(-1)} className="text-black">
+          <button onClick={onClose} className="text-black">
             <ChevronLeft size={24} />
           </button>
           <Folder size={24} className="text-black" />
