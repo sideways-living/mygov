@@ -31,7 +31,7 @@ export default function Services() {
         {/* Linked services */}
         <div className="mt-5 mx-auto" style={{ width: "95%" }}>
           <p className="text-gray-500 text-sm mb-2">Linked services</p>
-          <div className="bg-gray-100 rounded-lg overflow-hidden">
+          <div className="bg-gray-100 overflow-hidden">
             {services.map((svc, i) => (
               <div key={i}>
                 <div className="px-4 py-4 flex items-center justify-between cursor-pointer active:bg-gray-200">
