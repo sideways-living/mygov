@@ -48,7 +48,7 @@ export default function PINEntry({ onSuccess, onBack }) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col items-center justify-center gap-3 -translate-y-4">
+      <div className="flex flex-col items-center justify-center gap-3 translate-y-4">
         <div className="flex flex-col items-center gap-2">
           <p className="text-black text-sm">Enter your myGov app</p>
           <h1 className="text-black text-4xl font-bold">PIN</h1>
