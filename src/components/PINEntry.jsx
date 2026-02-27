@@ -36,6 +36,12 @@ export default function PINEntry({ onSuccess, onBack }) {
     }
   };
 
+  const handleSave = () => {
+    if (pin.length === maxLength) {
+      validatePIN(pin);
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-[9999] bg-[#4dcfef] flex flex-col max-w-sm mx-auto">
       {/* Status bar */}
