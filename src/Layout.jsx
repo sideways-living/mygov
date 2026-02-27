@@ -136,7 +136,7 @@ export default function Layout({ children, currentPageName }) {
               <Link
                 key={page}
                 to={createPageUrl(page)}
-                className="flex-1 flex flex-col items-center justify-center py-3 gap-1"
+                className="flex-1 flex flex-col items-center justify-center py-4 gap-1"
               >
                 {custom === "home" ? (
                   <HomeIcon active={isActive} />
