@@ -66,15 +66,19 @@ export default function MedicareCard() {
       </div>
 
       {/* Manage your card */}
-      <div className="mx-4 mt-3 bg-gray-100 rounded-xl px-5 py-4 flex items-center justify-between cursor-pointer active:bg-gray-200">
-        <span className="text-sm font-medium text-gray-800">Manage your card</span>
-        <ArrowUpRight size={18} className="text-gray-600" />
+      <div className="mx-auto mt-3" style={{ width: "90%" }}>
+        <div className="bg-gray-100 rounded-xl px-5 py-4 flex items-center justify-between cursor-pointer active:bg-gray-200">
+          <span className="text-sm font-medium text-gray-800">Manage your card</span>
+          <ArrowUpRight size={18} className="text-gray-600" />
+        </div>
       </div>
 
       {/* Verify card */}
-      <div className="mx-4 mt-3 border border-black rounded-xl px-5 py-4 flex items-center justify-center gap-3 cursor-pointer active:bg-gray-50" onClick={() => navigate(createPageUrl("VerifyCard"))}>
-        <QrCode size={20} className="text-black" />
-        <span className="text-sm font-semibold text-black">Verify card</span>
+      <div className="mx-auto mt-3" style={{ width: "90%" }}>
+        <div className="border border-black rounded-xl px-5 py-4 flex items-center justify-center gap-3 cursor-pointer active:bg-gray-50" onClick={() => navigate(createPageUrl("VerifyCard"))}>
+          <QrCode size={20} className="text-black" />
+          <span className="text-sm font-semibold text-black">Verify card</span>
+        </div>
       </div>
 
       {/* Last updated */}
