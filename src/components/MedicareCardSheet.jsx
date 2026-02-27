@@ -26,8 +26,8 @@ export default function MedicareCardSheet({ open, onClose, profile }) {
   const now = new Date();
   const lastUpdated = format(now, "d MMM yyyy 'at' h:mm aa").replace("AM", "am").replace("PM", "pm");
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center">
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-end justify-center">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black transition-opacity duration-300"
@@ -41,8 +41,7 @@ export default function MedicareCardSheet({ open, onClose, profile }) {
         style={{
           transform: animate ? "translateY(0)" : "translateY(100%)",
           borderRadius: "16px 16px 0 0",
-          maxHeight: "calc(100vh - 19px)", // ~0.5cm from top
-          minHeight: "60vh",
+          height: "calc(100vh - 19px)", // ~0.5cm from top
         }}
       >
         {/* Top bar */}
