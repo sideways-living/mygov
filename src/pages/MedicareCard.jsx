@@ -30,36 +30,39 @@ export default function MedicareCard() {
         </button>
       </div>
 
-      {/* Green header */}
-      <div
-        className="mx-0 px-6 py-8 flex items-center justify-center"
-        style={{
-          background: "repeating-linear-gradient(45deg, #8fca8f, #8fca8f 2px, #7dbf7d 2px, #7dbf7d 8px)",
-        }}
-      >
-        <span className="text-2xl font-bold text-gray-900">Medicare card</span>
-      </div>
-
-      {/* Card details */}
-      <div className="mx-4 mt-4 bg-white rounded-xl border border-gray-200 px-5 py-5 relative overflow-hidden">
-        {/* Watermark */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none opacity-10" style={{ gap: 8 }}>
-          {[...Array(4)].map((_, i) => (
-            <span key={i} className="text-4xl font-black text-[#4dcfef] tracking-widest" style={{ letterSpacing: 8 }}>
-              myGov myGov
-            </span>
-          ))}
+      {/* Green header + Card details — linked at 90% width */}
+      <div className="mx-auto mt-4" style={{ width: "90%" }}>
+        {/* Green header */}
+        <div
+          className="px-6 py-4 flex items-center justify-center rounded-t-xl"
+          style={{
+            background: "repeating-linear-gradient(45deg, #8fca8f, #8fca8f 2px, #7dbf7d 2px, #7dbf7d 8px)",
+          }}
+        >
+          <span className="text-xl font-bold text-gray-900">Medicare card</span>
         </div>
 
-        <p className="text-xs text-gray-500 mb-1">Card number</p>
-        <p className="text-2xl font-bold text-gray-900 mb-4">{profile.medicareNumber || "2555 69143 6"}</p>
+        {/* Card details */}
+        <div className="bg-white rounded-b-xl border border-gray-200 px-5 py-3 relative overflow-hidden">
+          {/* Watermark */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none opacity-10" style={{ gap: 8 }}>
+            {[...Array(4)].map((_, i) => (
+              <span key={i} className="text-4xl font-black text-[#4dcfef] tracking-widest" style={{ letterSpacing: 8 }}>
+                myGov myGov
+              </span>
+            ))}
+          </div>
 
-        <p className="text-base font-medium text-gray-900 mb-4">
-          {profile.medicarePosition || "1"}.{"  "}{profile.medicareName || "Daniel Greenyer"}
-        </p>
+          <p className="text-xs text-gray-500 mb-0.5">Card number</p>
+          <p className="text-2xl font-bold text-gray-900 mb-2">{profile.medicareNumber || "2555 69143 6"}</p>
 
-        <p className="text-xs text-gray-500 mb-1">Valid to</p>
-        <p className="text-base font-medium text-gray-900">{profile.medicareValidTo || "Jul 2027"}</p>
+          <p className="text-sm font-medium text-gray-900 mb-2">
+            {profile.medicarePosition || "1"}.{"  "}{profile.medicareName || "Daniel Greenyer"}
+          </p>
+
+          <p className="text-xs text-gray-500 mb-0.5">Valid to</p>
+          <p className="text-sm font-medium text-gray-900">{profile.medicareValidTo || "Jul 2027"}</p>
+        </div>
       </div>
 
       {/* Manage your card */}
