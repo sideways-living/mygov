@@ -38,7 +38,7 @@ export default function Layout({ children, currentPageName }) {
                 />
                 <span
                   className={`text-[10px] font-medium tracking-wide ${
-                    isActive ? "text-gray-900" : "text-gray-500"
+                    isActive ? "text-gray-900" : "text-gray-700"
                   }`}
                 >
                   {label}
