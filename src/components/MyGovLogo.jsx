@@ -12,14 +12,14 @@ export default function MyGovLogo({ size = 28 }) {
       
       {/* Left rounded triangle with mask */}
       <path
-        d="M 20 10 Q 26 10 32 18 L 104 100 L 32 182 Q 26 190 20 190 Q 8 190 8 178 L 8 22 Q 8 10 20 10 Z"
+        d="M 20 10 Q 26 10 32 18 L 85 100 L 32 182 Q 26 190 20 190 Q 8 190 8 178 L 8 22 Q 8 10 20 10 Z"
         fill="black"
         mask="url(#leftTriangleMask)"
       />
       
       {/* Right rounded triangle */}
       <path
-        d="M 62 10 Q 68 10 74 18 L 146 100 L 74 182 Q 68 190 62 190 Q 50 190 50 178 L 50 22 Q 50 10 62 10 Z"
+        d="M 62 10 Q 68 10 74 18 L 127 100 L 74 182 Q 68 190 62 190 Q 50 190 50 178 L 50 22 Q 50 10 62 10 Z"
         fill="black"
       />
     </svg>
