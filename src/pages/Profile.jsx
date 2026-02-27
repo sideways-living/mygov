@@ -243,8 +243,8 @@ export default function Profile() {
                 placeholder="e.g. A12-345-678"
               />
             </div>
-            </div>
-            )}
+          </div>
+        )}
 
           {/* Medicare */}
         {form.requiredCards?.medicare && (
