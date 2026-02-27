@@ -99,7 +99,7 @@ export default function Profile() {
         </div>
       </div>
 
-      <div className="flex-1 px-4 pt-6 pb-24 space-y-6">
+      <div className="flex-1 overflow-y-auto px-4 pt-6 pb-32 space-y-6">
         {/* Common Profile Information */}
         <div className="bg-white rounded-xl p-4 shadow-sm space-y-3">
           <p className="font-semibold text-gray-800 mb-3">Personal Information</p>
