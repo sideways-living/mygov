@@ -17,19 +17,12 @@ export default function Wallet() {
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
       {/* Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-4">
-        <div className="flex items-center justify-between">
-          {/* Wallet icon */}
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.8">
-            <rect x="2" y="5" width="20" height="15" rx="2" />
-            <path d="M16 12h2" strokeLinecap="round" />
-          </svg>
-          <span className="text-black font-semibold text-lg">Wallet</span>
-          <div className="flex items-center gap-4">
-            <Pencil size={18} className="text-black" />
-            <Plus size={22} className="text-black" />
-          </div>
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-4" style={{ minHeight: 110 }}>
+        <div className="flex items-center justify-end gap-5 mb-1">
+          <Pencil size={18} className="text-black" />
+          <Plus size={22} className="text-black" />
         </div>
+        <h1 className="text-black font-bold text-2xl">Wallet</h1>
       </div>
 
       {/* Cards */}
