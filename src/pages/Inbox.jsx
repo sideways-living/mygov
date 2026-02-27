@@ -27,16 +27,17 @@ export default function Inbox() {
   return (
     <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto">
       {/* Header */}
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-4">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-black font-bold text-2xl">Inbox</span>
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-4" style={{ minHeight: 110 }}>
+        <div className="flex items-center justify-end gap-5 mb-1">
           <Folder size={24} className="text-black" />
         </div>
-
-        {/* Search bar */}
-        <div className="flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2 mt-3">
-          <Search size={16} className="text-gray-400" />
-          <span className="text-gray-400 text-sm">Search</span>
+        <div className="flex items-center justify-between">
+          <span className="text-black font-bold text-2xl">Inbox</span>
+          {/* Search bar */}
+          <div className="flex items-center gap-2 bg-gray-100 rounded-full px-3 py-1.5 ml-4 flex-1 max-w-[180px]">
+            <Search size={14} className="text-gray-400 flex-shrink-0" />
+            <span className="text-gray-400 text-sm">Search</span>
+          </div>
         </div>
       </div>
 
