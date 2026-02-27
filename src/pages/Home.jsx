@@ -60,7 +60,7 @@ export default function Home() {
 
         {/* Manage Home Button */}
         <div className="flex justify-center mt-6">
-          <button className="flex items-center gap-2 border border-gray-400 rounded-full px-5 py-2.5 text-sm text-gray-700 font-medium bg-white hover:bg-gray-50 transition-colors">
+          <button className="flex items-center gap-2 border border-gray-400 rounded-lg px-5 py-2.5 text-sm text-gray-700 font-medium bg-white hover:bg-gray-50 transition-colors">
             <Settings size={16} />
             Manage home
           </button>
