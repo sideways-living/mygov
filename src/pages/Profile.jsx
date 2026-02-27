@@ -74,15 +74,27 @@ export default function Profile() {
             />
           </div>
 
-          <div>
-            <label className="block text-xs text-gray-500 mb-1">Name on Card</label>
-            <input
-              type="text"
-              value={form.medicareName}
-              onChange={e => handle("medicareName", e.target.value)}
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-              placeholder="e.g. Daniel Greenyer"
-            />
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">First Name</label>
+              <input
+                type="text"
+                value={form.medicareFirstName}
+                onChange={e => handle("medicareFirstName", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. Daniel"
+              />
+            </div>
+            <div>
+              <label className="block text-xs text-gray-500 mb-1">Last Name</label>
+              <input
+                type="text"
+                value={form.medicareLastName}
+                onChange={e => handle("medicareLastName", e.target.value)}
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
+                placeholder="e.g. Greenyer"
+              />
+            </div>
           </div>
 
           <div>
