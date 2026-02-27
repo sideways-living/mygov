@@ -38,10 +38,11 @@ export default function ScreenLock({ onUnlock }) {
           />
           
           {/* Info icon */}
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="black" strokeWidth="2" />
-            <text x="12" y="16" textAnchor="middle" fontSize="16" fontWeight="bold" fill="black">i</text>
-          </svg>
+          <img
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/4be0a3ce6_info1.png"
+            alt="Info"
+            className="w-6 h-6"
+          />
         </div>
       </div>
 
