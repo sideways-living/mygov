@@ -1,35 +1,45 @@
-import { LayoutGrid } from "lucide-react";
+import { Pencil, Plus, ChevronRight, ArrowUpRight } from "lucide-react";
+
+const services = [
+  { name: "Medicare", date: "Linked 21 Jun 2025" },
+  { name: "My Health Record", date: "Linked 21 Jun 2025" },
+  { name: "National Redress Scheme", date: "Linked 28 Apr 2025" },
+];
 
 export default function Services() {
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
-      <div className="bg-[#4dcfef] px-5 pt-10 pb-8 rounded-b-3xl">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <polygon points="6,4 22,14 6,24" fill="black" />
-              <polygon points="14,4 28,14 14,24" fill="black" opacity="0.4" />
-            </svg>
-            <span className="text-black font-semibold text-xl tracking-tight">myGov</span>
-          </div>
+      {/* Header */}
+      <div className="bg-[#4dcfef] px-5 pt-10 pb-4">
+        <div className="flex items-center justify-end gap-5 mb-1">
+          <Pencil size={18} className="text-black" />
+          <Plus size={22} className="text-black" />
         </div>
+        <h1 className="text-black font-bold text-2xl">Services</h1>
       </div>
+
+      {/* Content */}
       <div className="flex-1 pb-24">
-        <div className="grid grid-cols-2" style={{ border: "1px solid #d1d5db" }}>
-          {["Medicare", "Centrelink", "myTax", "Child Support"].map((name, i) => (
-            <div
-              key={name}
-              className="flex flex-col items-center justify-center gap-3 bg-white cursor-pointer hover:bg-gray-50 active:bg-gray-100 transition-colors"
-              style={{
-                height: "160px",
-                borderRight: i % 2 === 0 ? "1px solid #d1d5db" : "none",
-                borderBottom: i < 2 ? "1px solid #d1d5db" : "none",
-              }}
-            >
-              <LayoutGrid size={32} className="text-gray-400" />
-              <span className="text-sm font-medium text-gray-700">{name}</span>
-            </div>
-          ))}
+        {/* Forms and Applications */}
+        <div className="bg-white border-b border-gray-200 px-4 py-4 flex items-center justify-between">
+          <span className="text-gray-900 text-sm">Forms and Applications</span>
+          <ChevronRight size={18} className="text-gray-400" />
+        </div>
+
+        {/* Linked services */}
+        <div className="mt-5">
+          <p className="text-gray-500 text-sm px-4 mb-2">Linked services</p>
+          <div className="bg-white">
+            {services.map((svc, i) => (
+              <div key={i} className="px-4 py-4 border-b border-gray-100 flex items-center justify-between cursor-pointer active:bg-gray-50">
+                <div>
+                  <p className="text-gray-900 text-sm font-medium">{svc.name}</p>
+                  <p className="text-gray-400 text-xs mt-0.5">{svc.date}</p>
+                </div>
+                <ArrowUpRight size={18} className="text-gray-400" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
