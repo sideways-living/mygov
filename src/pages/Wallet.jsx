@@ -60,7 +60,7 @@ export default function Wallet() {
                 <span className="text-white text-sm font-bold italic">medicare</span>
               </div>
             </div>
-            <p className="text-gray-800 text-2xl font-mono tracking-widest">.... ..143 b</p>
+            <p className="text-gray-800 text-2xl font-mono tracking-widest">{profile.medicareNumber}</p>
           </div>
         </div>
 
