@@ -59,6 +59,21 @@ export default function Layout({ children, currentPageName }) {
   const [inactivityTimer, setInactivityTimer] = useState(null);
 
   useEffect(() => {
+    // Preload all images
+    const images = [
+      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/d34c12912_Australian-government-stacked-black.png",
+      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/8b73f081a_color-replaced1.png",
+      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/4be0a3ce6_info1.png",
+      "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/myGov-logo.png",
+    ];
+    
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  useEffect(() => {
     const profile = getProfile();
     const hasPin = profile.screenLockPin && profile.screenLockPin.length > 0;
     setIsLocked(hasPin);
