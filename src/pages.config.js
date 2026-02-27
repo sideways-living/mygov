@@ -52,6 +52,7 @@ import Inbox from './pages/Inbox';
 import Services from './pages/Services';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import MedicareCard from './pages/MedicareCard';
 import __Layout from './Layout.jsx';
 
 
@@ -61,6 +62,7 @@ export const PAGES = {
     "Services": Services,
     "Home": Home,
     "Profile": Profile,
+    "MedicareCard": MedicareCard,
 }
 
 export const pagesConfig = {
