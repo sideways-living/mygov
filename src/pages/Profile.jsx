@@ -50,6 +50,7 @@ export function saveProfile(data) {
 
 export default function Profile() {
   const [form, setForm] = useState(getProfile);
+  const [saveState, setSaveState] = useState("idle"); // idle, saving, saved
 
   const handle = (key, val) => {
     const updated = { ...form, [key]: val };
