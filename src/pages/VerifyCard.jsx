@@ -41,7 +41,7 @@ export default function VerifyCard() {
         {/* Status message */}
         <p className="text-sm text-gray-500 text-center">
           {status === "loading"
-            ? "Getting verification code..."
+            ? "Loading verification code"
             : "Problem loading verification code."}
         </p>
 
