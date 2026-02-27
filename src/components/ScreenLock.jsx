@@ -31,23 +31,11 @@ export default function ScreenLock({ onUnlock }) {
         
         <div className="flex items-center gap-3">
           {/* 3D Barcode icon */}
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="4" width="3" height="6" fill="black" />
-            <rect x="7" y="4" width="2" height="6" fill="black" />
-            <rect x="10" y="4" width="3" height="6" fill="black" />
-            <rect x="14" y="4" width="2" height="6" fill="black" />
-            <rect x="17" y="4" width="3" height="6" fill="black" />
-            <rect x="3" y="11" width="3" height="2" fill="black" />
-            <rect x="7" y="11" width="2" height="2" fill="black" />
-            <rect x="10" y="11" width="3" height="2" fill="black" />
-            <rect x="14" y="11" width="2" height="2" fill="black" />
-            <rect x="17" y="11" width="3" height="2" fill="black" />
-            <rect x="4" y="14" width="2" height="5" fill="black" />
-            <rect x="7" y="14" width="3" height="5" fill="black" />
-            <rect x="11" y="14" width="2" height="5" fill="black" />
-            <rect x="14" y="14" width="3" height="5" fill="black" />
-            <rect x="18" y="14" width="2" height="5" fill="black" />
-          </svg>
+          <img
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/8b73f081a_color-replaced1.png"
+            alt="3D Barcode"
+            className="w-6 h-6"
+          />
           
           {/* Info icon */}
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
