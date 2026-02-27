@@ -13,6 +13,10 @@ export default function PINEntry({ onSuccess, onBack }) {
       const newPin = pin + num;
       setPin(newPin);
       setError("");
+
+      if (newPin.length === maxLength) {
+        validatePIN(newPin);
+      }
     }
   };
 
@@ -29,12 +33,6 @@ export default function PINEntry({ onSuccess, onBack }) {
       setError("Incorrect PIN");
       setPin("");
       setTimeout(() => setError(""), 2000);
-    }
-  };
-
-  const handleSave = () => {
-    if (pin.length === maxLength) {
-      validatePIN(pin);
     }
   };
 
@@ -82,7 +80,7 @@ export default function PINEntry({ onSuccess, onBack }) {
       </div>
 
       {/* Numeric keypad */}
-      <div className="px-5 pb-8 space-y-4">
+      <div className="px-5 pb-8">
       <div className="grid grid-cols-3 gap-3">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
           <button
@@ -121,19 +119,6 @@ export default function PINEntry({ onSuccess, onBack }) {
           ⌫
         </button>
       </div>
-
-      {/* Save button */}
-      <button
-        onClick={handleSave}
-        disabled={pin.length !== maxLength}
-        className={`w-full py-4 rounded-lg font-semibold text-base transition-colors ${
-          pin.length === maxLength
-            ? "bg-black text-white"
-            : "bg-gray-300 text-gray-500"
-        }`}
-      >
-        Save
-      </button>
       </div>
     </div>
   );
