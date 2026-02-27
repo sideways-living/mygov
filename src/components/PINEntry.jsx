@@ -98,7 +98,7 @@ export default function PINEntry({ onSuccess, onBack }) {
         <div className="col-start-2">
           <button
             onClick={() => handleNumberClick("0")}
-            className="w-full bg-black text-white py-1.5 rounded-md font-semibold text-xl"
+            className="w-full bg-black text-white py-2.5 rounded-md font-semibold text-xl"
           >
             0
           </button>
