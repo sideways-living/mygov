@@ -47,7 +47,7 @@ export default function Wallet() {
         <div
           className="rounded-2xl overflow-hidden shadow-sm cursor-pointer relative"
           style={{ aspectRatio: "1.586" }}
-          onClick={() => navigate(createPageUrl("MedicareCard"))}
+          onClick={() => setMedicareOpen(true)}
         >
           <img
             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/37f9c6da5_medicarecard.png"
