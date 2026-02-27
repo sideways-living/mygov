@@ -1,6 +1,9 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { ClipboardList } from "lucide-react";
+import ScreenLock from "@/components/ScreenLock";
+import { getProfile } from "@/pages/Profile";
 
 const HomeIcon = ({ active }) => {
   const fill = active ? "#111827" : "#9ca3af";
