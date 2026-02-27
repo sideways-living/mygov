@@ -58,6 +58,14 @@ export default function Profile() {
   };
 
   const handleCardToggle = (card) => {
+    const currentCount = Object.values(form.requiredCards).filter(Boolean).length;
+    const isEnabling = !form.requiredCards[card];
+    
+    // Prevent enabling more than 2 cards
+    if (isEnabling && currentCount >= 2) {
+      return;
+    }
+    
     const updated = {
       ...form,
       requiredCards: {
