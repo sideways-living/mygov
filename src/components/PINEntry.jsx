@@ -71,7 +71,7 @@ export default function PINEntry({ onSuccess, onBack }) {
       </div>
 
       {/* Numeric keypad */}
-      <div className="px-5 pb-8">
+      <div className="px-5 pb-8 space-y-2.5">
       <div className="grid grid-cols-3 gap-2.5">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
           <button
