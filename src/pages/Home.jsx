@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         {/* Alerts Card */}
-        <div className="bg-white rounded-2xl shadow-sm p-4 mb-5">
+        <div className="bg-white rounded-xl shadow-sm p-4 mb-5">
           <h2 className="text-base font-bold text-gray-900 mb-3">Alerts</h2>
           <div className="bg-gray-50 rounded-xl px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-3">
