@@ -1,7 +1,6 @@
 import { Search, Paperclip, ChevronRight, Folder } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { createPageUrl } from "@/utils";
 import { useRef, useState } from "react";
+import MessageSlide from "@/components/MessageSlide";
 
 const messages = [
   {
@@ -25,9 +24,9 @@ const messages = [
 const PULL_THRESHOLD = 60;
 
 export default function Inbox() {
-  const navigate = useNavigate();
   const [pullDistance, setPullDistance] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [selectedMessage, setSelectedMessage] = useState(null);
   const touchStartY = useRef(null);
   const listRef = useRef(null);
 
