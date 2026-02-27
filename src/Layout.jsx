@@ -55,6 +55,49 @@ const navItems = [
 ];
 
 export default function Layout({ children, currentPageName }) {
+  const [isLocked, setIsLocked] = useState(true);
+  const [inactivityTimer, setInactivityTimer] = useState(null);
+
+  useEffect(() => {
+    const profile = getProfile();
+    const hasPin = profile.screenLockPin && profile.screenLockPin.length > 0;
+    setIsLocked(hasPin);
+  }, []);
+
+  useEffect(() => {
+    if (!isLocked) {
+      const handleActivity = () => {
+        clearTimeout(inactivityTimer);
+        const timer = setTimeout(() => {
+          const profile = getProfile();
+          if (profile.screenLockPin && profile.screenLockPin.length > 0) {
+            setIsLocked(true);
+          }
+        }, 2 * 60 * 1000); // 2 minutes
+        setInactivityTimer(timer);
+      };
+
+      window.addEventListener("mousemove", handleActivity);
+      window.addEventListener("keypress", handleActivity);
+      window.addEventListener("click", handleActivity);
+      window.addEventListener("touch", handleActivity);
+
+      handleActivity();
+
+      return () => {
+        window.removeEventListener("mousemove", handleActivity);
+        window.removeEventListener("keypress", handleActivity);
+        window.removeEventListener("click", handleActivity);
+        window.removeEventListener("touch", handleActivity);
+        clearTimeout(inactivityTimer);
+      };
+    }
+  }, [isLocked, inactivityTimer]);
+
+  if (isLocked) {
+    return <ScreenLock onUnlock={() => setIsLocked(false)} />;
+  }
+
   return (
     <div className="relative min-h-screen bg-[#f0f0f0]">
       <style>{`
