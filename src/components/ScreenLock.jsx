@@ -21,7 +21,7 @@ export default function ScreenLock({ onUnlock }) {
           <img
             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/d34c12912_Australian-government-stacked-black.png"
             alt="Australian Government"
-            className="h-12"
+            className="h-8"
           />
           <div className="flex items-center gap-1.5">
             <MyGovLogo size={20} />
