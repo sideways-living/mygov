@@ -1,15 +1,17 @@
 export default function MyGovLogo({ size = 28 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Left vertical rounded bar */}
-      <rect x="40" y="35" width="35" height="130" rx="17.5" fill="black" />
-      
-      {/* Right chevron/arrow shape */}
+      {/* Left rounded triangle */}
       <path
-        d="M 100 35 L 160 100 L 100 165 C 95 160 92.5 155 92.5 145 L 92.5 55 C 92.5 45 95 40 100 35 Z"
+        d="M 40 35 Q 45 35 50 40 L 100 100 L 50 160 Q 45 165 40 165 Q 30 165 30 155 L 30 45 Q 30 35 40 35 Z"
         fill="black"
       />
-      <rect x="100" y="70" width="35" height="60" rx="17.5" fill="black" transform="rotate(25 117.5 100)" />
+      
+      {/* Right rounded triangle */}
+      <path
+        d="M 100 35 Q 105 35 110 40 L 160 100 L 110 160 Q 105 165 100 165 Q 90 165 90 155 L 90 45 Q 90 35 100 35 Z"
+        fill="black"
+      />
     </svg>
   );
 }
