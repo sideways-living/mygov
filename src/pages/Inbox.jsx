@@ -22,6 +22,8 @@ const messages = [
 ];
 
 export default function Inbox() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-white flex flex-col max-w-sm mx-auto">
       {/* Header */}
