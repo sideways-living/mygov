@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { getProfile } from "./Profile";
 import MedicareCardSheet from "@/components/MedicareCardSheet";
+import PensionerCardSheet from "@/components/PensionerCardSheet";
 
 export default function Wallet() {
   const navigate = useNavigate();
