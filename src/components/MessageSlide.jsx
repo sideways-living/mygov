@@ -8,7 +8,7 @@ const messageComponents = {
 };
 
 export default function MessageSlide({ message, onClose }) {
-  const MessageComponent = messageComponents[message.page];
+  const MessageComponent = message ? messageComponents[message.page] : null;
 
   return (
     <>

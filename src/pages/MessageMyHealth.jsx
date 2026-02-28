@@ -3,7 +3,7 @@ import { getProfile } from "./Profile";
 
 export default function MessageMyHealth({ onClose }) {
   const profile = getProfile();
-  const firstName = profile.medicareFirstName.toUpperCase();
+  const firstName = (profile.firstName || "").toUpperCase();
 
   return (
     <div className="min-h-screen bg-white flex flex-col w-screen">
