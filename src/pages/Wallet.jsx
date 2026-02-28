@@ -12,6 +12,7 @@ export default function Wallet() {
   const [profile, setProfile] = useState(getProfile);
   const [medicareOpen, setMedicareOpen] = useState(false);
   const [pensionerOpen, setPensionerOpen] = useState(false);
+  const [organOpen, setOrganOpen] = useState(false);
 
   useEffect(() => {
     const onFocus = () => setProfile(getProfile());
