@@ -5,6 +5,7 @@ import { createPageUrl } from "@/utils";
 import { getProfile } from "./Profile";
 import MedicareCardSheet from "@/components/MedicareCardSheet";
 import PensionerCardSheet from "@/components/PensionerCardSheet";
+import OrganDonorCardSheet from "@/components/OrganDonorCardSheet";
 
 export default function Wallet() {
   const navigate = useNavigate();
