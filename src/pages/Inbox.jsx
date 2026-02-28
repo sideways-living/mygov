@@ -1,6 +1,7 @@
 import { Search, Paperclip, ChevronRight, Folder } from "lucide-react";
 import { useRef, useState } from "react";
 import MessageSlide from "@/components/MessageSlide";
+import FoldersSheet from "@/components/FoldersSheet";
 
 const messages = [
   {
