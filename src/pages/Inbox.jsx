@@ -28,6 +28,7 @@ export default function Inbox() {
   const [pullDistance, setPullDistance] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [selectedMessage, setSelectedMessage] = useState(null);
+  const [foldersOpen, setFoldersOpen] = useState(false);
   const touchStartY = useRef(null);
   const listRef = useRef(null);
 
