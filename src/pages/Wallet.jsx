@@ -49,12 +49,23 @@ export default function Wallet() {
 
         {/* Pensioner Concession Card */}
         {profile.requiredCards?.pensionConcession && (
-          <div className="rounded-2xl overflow-hidden shadow-sm" style={{ aspectRatio: "1.586" }}>
-            <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/39641633c_organdonor.jpg"
-              alt="Pensioner Concession card"
-              className="w-full h-full object-cover"
-            />
+          <div
+            className="rounded-2xl overflow-hidden shadow-sm cursor-pointer"
+            onClick={() => setPensionerOpen(true)}
+          >
+            {/* Purple title bar */}
+            <div className="bg-[#8b3a5a] px-5 py-4">
+              <span className="text-white font-bold text-lg">Pensioner Concession Card</span>
+            </div>
+            {/* Card body */}
+            <div className="bg-[#dceef8] px-5 py-4 space-y-1" style={{ minHeight: 90 }}>
+              <p className="text-black font-bold text-base">{[profile.firstName, profile.surname].filter(Boolean).join(" ")}</p>
+              <p className="text-black text-sm">JSP</p>
+            </div>
+            {/* Footer */}
+            <div className="bg-[#dceef8] border-t border-white/40 px-5 py-3">
+              <span className="text-gray-600 text-sm">Expires&nbsp;&nbsp;{profile.pensionerExpiryDate || "—"}</span>
+            </div>
           </div>
         )}
 
