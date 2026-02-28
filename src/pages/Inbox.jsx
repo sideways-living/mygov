@@ -110,6 +110,7 @@ export default function Inbox() {
       </div>
 
       <MessageSlide message={selectedMessage} onClose={() => setSelectedMessage(null)} />
+      <FoldersSheet open={foldersOpen} onClose={() => setFoldersOpen(false)} totalMessages={messages.length} />
     </div>
   );
 }
