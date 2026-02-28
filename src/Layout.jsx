@@ -133,7 +133,7 @@ export default function Layout({ children, currentPageName }) {
           -webkit-user-select: none;
         }
         html, body { 
-          background: #f0f0f0;
+          background: #4dcfef;
           overflow: hidden;
           height: 100%;
           width: 100%;
