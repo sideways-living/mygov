@@ -100,6 +100,7 @@ export default function Wallet() {
       </div>
 
       <MedicareCardSheet open={medicareOpen} onClose={() => setMedicareOpen(false)} profile={profile} />
+      <PensionerCardSheet open={pensionerOpen} onClose={() => setPensionerOpen(false)} profile={profile} />
     </div>
   );
 }
