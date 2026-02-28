@@ -89,7 +89,7 @@ export default function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f0f0f0] flex flex-col max-w-sm mx-auto">
+    <div className="fixed inset-0 bg-[#f0f0f0] flex flex-col max-w-sm mx-auto overflow-hidden">
       <div className="bg-[#4dcfef] px-5 pt-10 pb-6">
         <div className="flex items-center gap-3">
           <Link to={createPageUrl("Home")}>
