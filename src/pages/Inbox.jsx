@@ -64,7 +64,7 @@ export default function Inbox() {
       {/* Header */}
       <div className="bg-[#4dcfef] px-5 pt-10 pb-0 w-screen" style={{ minHeight: 110 }}>
         <div className="flex items-center justify-end gap-5 mb-1">
-          <Folder size={24} className="text-black" />
+          <Folder size={24} className="text-black cursor-pointer" onClick={() => setFoldersOpen(true)} />
         </div>
         <span className="text-black font-bold text-2xl">Inbox</span>
       </div>
