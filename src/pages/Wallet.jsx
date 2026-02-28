@@ -10,6 +10,7 @@ export default function Wallet() {
   const navigate = useNavigate();
   const [profile, setProfile] = useState(getProfile);
   const [medicareOpen, setMedicareOpen] = useState(false);
+  const [pensionerOpen, setPensionerOpen] = useState(false);
 
   useEffect(() => {
     const onFocus = () => setProfile(getProfile());
