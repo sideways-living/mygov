@@ -40,7 +40,7 @@ export default function Wallet() {
 
         {/* Organ Donor Card */}
         {profile.requiredCards?.organ && (
-          <div className="rounded-2xl overflow-hidden shadow-sm" style={{ aspectRatio: "1.586" }}>
+          <div className="rounded-2xl overflow-hidden shadow-sm cursor-pointer" style={{ aspectRatio: "1.586" }} onClick={() => setOrganOpen(true)}>
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a10b3e254d206639198071/39641633c_organdonor.jpg"
               alt="Organ donor card"
