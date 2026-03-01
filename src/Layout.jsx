@@ -137,6 +137,7 @@ export default function Layout({ children, currentPageName }) {
           overflow: hidden;
           height: 100%;
           width: 100%;
+          touch-action: manipulation;
         }
         body {
           margin: 0;
