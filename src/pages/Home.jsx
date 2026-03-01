@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 px-4 pt-5 pb-24">
+      <div className="flex-1 px-4 pt-5 pb-32 overflow-y-auto">
         {/* Greeting */}
         <div className="mb-5">
           <h1 className="text-2xl font-bold text-gray-900">Hi, {userName}</h1>

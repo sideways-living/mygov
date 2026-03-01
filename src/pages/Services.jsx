@@ -19,7 +19,7 @@ export default function Services() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 pb-24 bg-white">
+      <div className="flex-1 pb-32 bg-white overflow-y-auto">
         {/* Forms and Applications */}
         <div className="mx-auto mt-4" style={{ width: "95%" }}>
           <div className="bg-gray-100 px-4 py-4 flex items-center justify-between">
