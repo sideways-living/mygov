@@ -40,7 +40,7 @@ export default function OrganDonorCardSheet({ open, onClose, profile }) {
 
       {/* Sheet */}
       <div
-        className="relative bg-[#f0f0f0] rounded-t-2xl w-full transition-transform duration-300 pb-10"
+        className="relative bg-[#f0f0f0] rounded-t-2xl w-full transition-transform duration-300 pb-10 flex flex-col max-h-[95vh]"
         style={{ transform: animate ? "translateY(0)" : "translateY(100%)" }}
       >
         {/* Top bar */}
@@ -60,7 +60,8 @@ export default function OrganDonorCardSheet({ open, onClose, profile }) {
         </div>
 
         {/* Card details */}
-        <div className="mx-4 mt-4 bg-white rounded-xl px-5 py-5 space-y-4 relative overflow-hidden">
+        <div className="flex-1 overflow-y-auto px-4 pt-4 pb-10">
+        <div className="bg-white rounded-xl px-5 py-5 space-y-4 relative overflow-hidden">
           {/* Watermark */}
           <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[48px] font-bold text-[#4dcfef]/20 select-none pointer-events-none leading-none">
             myGov
@@ -79,7 +80,7 @@ export default function OrganDonorCardSheet({ open, onClose, profile }) {
         </div>
 
         {/* Action rows */}
-        <div className="mx-4 mt-4 bg-white rounded-xl overflow-hidden divide-y divide-gray-100">
+        <div className="mx-4 mt-4 bg-white rounded-xl overflow-hidden divide-y divide-gray-100 flex-shrink-0">
           <div className="flex items-center justify-between px-5 py-4 cursor-pointer active:bg-gray-50">
             <span className="text-black text-base">Donation preferences</span>
             <ChevronRight size={18} className="text-gray-500" />
@@ -91,7 +92,8 @@ export default function OrganDonorCardSheet({ open, onClose, profile }) {
         </div>
 
         {/* Last updated */}
-        <p className="text-center text-gray-400 text-xs mt-5">Last updated {lastUpdated}</p>
+        <p className="text-center text-gray-400 text-xs mt-5 flex-shrink-0">Last updated {lastUpdated}</p>
+        </div>
       </div>
     </div>,
     document.body
