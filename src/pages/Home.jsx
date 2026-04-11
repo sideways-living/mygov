@@ -8,7 +8,9 @@ import MyGovLogo from "@/components/MyGovLogo";
 
 export default function Home() {
   const profile = getProfile();
-  const userName = profile.firstName ? profile.firstName.charAt(0).toUpperCase() + profile.firstName.slice(1).toLowerCase() : "there"; + profile.firstName.slice(1).toLowerCase() : "there";.charAt(0).toUpperCase() + profile.medicareFirstName.slice(1).toLowerCase();
+  const userName = profile.firstName
+    ? profile.firstName.charAt(0).toUpperCase() + profile.firstName.slice(1).toLowerCase()
+    : "there";
   const lastSigned = new Date();
 
   return (
@@ -27,7 +29,7 @@ export default function Home() {
             </svg>
           </Link>
         </div>
-        {/* Concave curve bottom-right: teal outer, body-colour quarter circle */}
+        {/* Concave curve bottom-right */}
         <svg
           className="absolute bottom-0 right-0 translate-y-full"
           width="36" height="36"
@@ -35,9 +37,7 @@ export default function Home() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Teal background square */}
           <rect width="36" height="36" fill="#4dcfef" />
-          {/* Body-colour quarter circle cuts out the corner */}
           <path d="M0 0 Q36 0 36 36 L0 36 Z" fill="#f0f0f0" />
         </svg>
       </div>
