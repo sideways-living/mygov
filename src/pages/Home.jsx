@@ -8,7 +8,7 @@ import MyGovLogo from "@/components/MyGovLogo";
 
 export default function Home() {
   const profile = getProfile();
-  const userName = profile.medicareFirstName.charAt(0).toUpperCase() + profile.medicareFirstName.slice(1).toLowerCase();
+  const userName = profile.firstName ? profile.firstName.charAt(0).toUpperCase() + profile.firstName.slice(1).toLowerCase() : "there"; + profile.firstName.slice(1).toLowerCase() : "there";.charAt(0).toUpperCase() + profile.medicareFirstName.slice(1).toLowerCase();
   const lastSigned = new Date();
 
   return (
