@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { X, MoreHorizontal, QrCode, ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { format } from "date-fns";
+import { format, parse, isValid } from "date-fns";
 
 export default function MedicareCardSheet({ open, onClose, profile }) {
   const navigate = useNavigate();
@@ -88,7 +88,12 @@ export default function MedicareCardSheet({ open, onClose, profile }) {
                </p>
 
                <p className="text-xs text-gray-500 mb-0.5">Valid to</p>
-               <p className="text-sm font-medium text-gray-900">{profile?.medicareValidTo || "Jul 27"}</p>
+               <p className="text-sm font-medium text-gray-900">{(() => {
+                 const raw = profile?.medicareValidTo;
+                 if (!raw) return "Jul 27";
+                 const d = parse(raw, "yyyy-MM", new Date());
+                 return isValid(d) ? format(d, "MMM yy") : raw;
+               })()}</p>
             </div>
           </div>
 

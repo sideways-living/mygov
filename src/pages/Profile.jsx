@@ -18,7 +18,7 @@ const DEFAULTS = {
   medicareNumber: "2555 69143 6",
   medicareCardPosition: "1",
   medicareMiddleInitial: "",
-  medicareValidTo: "Jul 27",
+  medicareValidTo: "2027-07",
   
   // Pensioner Concession card
   pensionerCRN: "",
@@ -289,11 +289,10 @@ export default function Profile() {
             <div>
               <label className="block text-xs text-gray-500 mb-1">Valid To</label>
               <input
-                type="text"
+                type="month"
                 value={form.medicareValidTo}
-                onChange={e => handle("medicareValidTo", e.target.value.toUpperCase())}
+                onChange={e => handle("medicareValidTo", e.target.value)}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4dcfef]"
-                placeholder="e.g. Jul 27"
               />
             </div>
           </div>
