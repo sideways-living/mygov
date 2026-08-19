@@ -92,7 +92,7 @@ export default function MedicareCardSheet({ open, onClose, profile }) {
                  const raw = profile?.medicareValidTo;
                  if (!raw) return "Jul 27";
                  const d = parse(raw, "yyyy-MM", new Date());
-                 return isValid(d) ? format(d, "MMM yy") : raw;
+                 return isValid(d) ? format(d, "MMM yyyy") : raw;
                })()}</p>
             </div>
           </div>
